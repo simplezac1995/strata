@@ -1,0 +1,99 @@
+{
+  "tenants": [
+    {
+      "code": "default",
+      "name": "Strata Demo",
+      "domain": "demo.strata.local",
+      "status": "active",
+      "plan": "enterprise"
+    },
+    {
+      "code": "acme",
+      "name": "Acme Operations",
+      "domain": "acme.strata.demo",
+      "status": "active",
+      "plan": "growth"
+    },
+    {
+      "code": "globex",
+      "name": "Globex Analytics",
+      "domain": "globex.strata.demo",
+      "status": "trial",
+      "plan": "starter"
+    }
+  ],
+  "oauthClients": [
+    {
+      "clientId": "strata-web-demo",
+      "name": "Strata Web Demo",
+      "secretPlaintext": "demo-web-client-secret",
+      "scopes": "system.read system.write demo.read"
+    },
+    {
+      "clientId": "strata-automation-demo",
+      "name": "Automation Demo",
+      "secretPlaintext": "demo-automation-client-secret",
+      "scopes": "system.read ai.read"
+    }
+  ],
+  "sensitiveWords": [
+    { "word": "password" },
+    { "word": "credential" },
+    { "word": "secret" },
+    { "word": "token" }
+  ],
+  "regions": [
+    { "code": "CN", "name": "China", "level": 1 },
+    { "code": "US", "name": "United States", "level": 1 },
+    { "code": "CN-BJ", "name": "Beijing", "level": 2, "parentCode": "CN" },
+    { "code": "CN-SH", "name": "Shanghai", "level": 2, "parentCode": "CN" },
+    { "code": "US-CA", "name": "California", "level": 2, "parentCode": "US" },
+    { "code": "US-NY", "name": "New York", "level": 2, "parentCode": "US" }
+  ],
+  "webhooks": [
+    {
+      "name": "Order Synchronization",
+      "url": "https://webhook.invalid/strata-demo-orders",
+      "secretPlaintext": "demo-order-webhook-secret"
+    },
+    {
+      "name": "Audit Event Mirror",
+      "url": "https://webhook.invalid/strata-demo-audit",
+      "secretPlaintext": "demo-audit-webhook-secret"
+    }
+  ],
+  "emailTemplates": [
+    {
+      "code": "welcome",
+      "name": "Welcome Email",
+      "subject": "Welcome to Strata, {{name}}",
+      "body": "Hi {{name}}, your Strata workspace is ready."
+    },
+    {
+      "code": "password-reset",
+      "name": "Password Reset",
+      "subject": "Reset your Strata password",
+      "body": "Hi {{name}}, use {{token}} to reset your password."
+    },
+    {
+      "code": "workflow-completed",
+      "name": "Workflow Completed",
+      "subject": "Workflow {{workflow}} completed",
+      "body": "Workflow {{workflow}} completed successfully at {{completedAt}}."
+    }
+  ],
+  "announcements": [
+    {
+      "title": "Welcome to the Strata demonstration workspace",
+      "content": "This environment contains complete sample data for every persistent management resource."
+    },
+    {
+      "title": "Workflow engine remains opt-in",
+      "content": "Workflow definitions and runs are demo records. Enable the Flowable plugin only when a real engine is configured."
+    },
+    {
+      "title": "AI providers require your own credentials",
+      "content": "Provider and model rows are configuration examples. Add a real API key before invoking an external LLM."
+    }
+  ]
+}
