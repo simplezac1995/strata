@@ -69,7 +69,7 @@
         <mapstruct.version>1.6.3</mapstruct.version>
         <springdoc.version>3.0.1</springdoc.version>
         <spring-modulith.version>2.0.0</spring-modulith.version>
-        <stripe.version>32.2.0</stripe.version>
+        <stripe.version>34.1.0</stripe.version>
         <poi.version>5.4.1</poi.version>
         <flowable.version>8.0.0</flowable.version>
         <jacoco.version>0.8.15</jacoco.version>
