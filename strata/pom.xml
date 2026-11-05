@@ -80,7 +80,7 @@
         <postgresql.version>42.7.12</postgresql.version>
         <!-- jackson-databind 2.x / 3.x and log4j-api patch releases (CVE-2026-54515, CVE-2026-59889, GHSA-mhm7-754m-9p8w, CVE-2026-49844). -->
         <jackson-2.version>2.21.5</jackson-2.version>
-        <jackson-3.version>3.1.5</jackson-3.version>
+        <jackson-3.version>3.2.4</jackson-3.version>
         <log4j.version>2.25.5</log4j.version>
         <!-- Blockchain SDKs: TRON Trident (TRC20) + web3j (BNB Chain / BEP20, EVM-compatible) -->
         <trident.version>1.0.0</trident.version>
