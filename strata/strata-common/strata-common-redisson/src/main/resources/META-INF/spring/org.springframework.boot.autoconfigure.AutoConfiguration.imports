@@ -1,0 +1,2 @@
+dev.strata.common.redisson.config.RedissonAutoConfiguration
+dev.strata.common.redisson.ratelimit.RedissonRateLimiterConfig

@@ -1,0 +1,7 @@
+# Files that are executed inside Linux containers or during image builds must
+# always be stored and checked out with LF endings, even on Windows hosts with
+# core.autocrlf=true (a CRLF shebang / RUN line breaks at runtime).
+*.sh         text eol=lf
+Dockerfile   text eol=lf
+Dockerfile.* text eol=lf
+Caddyfile    text eol=lf
