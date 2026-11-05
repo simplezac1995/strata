@@ -72,7 +72,7 @@
         <stripe.version>32.2.0</stripe.version>
         <poi.version>5.4.1</poi.version>
         <flowable.version>8.0.0</flowable.version>
-        <jacoco.version>0.8.15</jacoco.version>
+        <jacoco.version>0.8.16</jacoco.version>
         <jasypt.version>3.0.5</jasypt.version>
         <!-- Security overrides: patch versions newer than the Spring Boot 4.1.0 BOM (Trivy CRITICAL/HIGH/MEDIUM fixes). -->
         <tomcat.version>11.0.25</tomcat.version>
