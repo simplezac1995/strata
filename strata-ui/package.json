@@ -63,7 +63,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
     "jsdom": "^30.0.1",
-    "knip": "^6.35.1",
+    "knip": "^6.44.1",
     "openapi-typescript": "^7.13.0",
     "oxlint": "^1.75.0",
     "prettier": "^3.9.6",
