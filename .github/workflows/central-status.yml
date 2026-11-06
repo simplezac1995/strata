@@ -1,0 +1,38 @@
+name: Central status
+
+# Manual helper: query the Central Portal for the state of one deployment (no secrets are printed).
+on:
+  workflow_dispatch:
+    inputs:
+      deployment-id:
+        description: "Central Portal deployment id (from the release log)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  status:
+    name: Query Central Portal
+    runs-on: ubuntu-latest
+    steps:
+      - name: Query deployment
+        env:
+          CENTRAL_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
+          CENTRAL_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
+          DEPLOYMENT_ID: ${{ inputs.deployment-id }}
+        run: |
+          set -euo pipefail
+          code=$(curl -sS -X POST -u "$CENTRAL_USERNAME:$CENTRAL_PASSWORD" -o /tmp/deployment.json -w "%{http_code}" \
+            "https://central.sonatype.com/api/v1/publisher/status?id=$DEPLOYMENT_ID")
+          echo "HTTP $code"
+          python3 - <<'PY'
+          import json
+          try:
+              data = json.load(open('/tmp/deployment.json'))
+          except Exception:
+              print(open('/tmp/deployment.json').read()[:500])
+              raise SystemExit(0)
+          keys = ['deploymentId', 'deploymentName', 'deploymentState', 'published', 'publishing', 'errors']
+          print(json.dumps({k: data.get(k) for k in keys if k in data}, indent=2))
+          PY
