@@ -1,0 +1,2022 @@
+{
+  "ai.assistant.ai33FloatingCopilot": {
+    "en": "Floating copilot",
+    "zh": "悬浮 Copilot"
+  },
+  "ai.assistant.aiCanMakeMistakesReviewCriticalActionsBeforeConfirmi": {
+    "en": "AI can make mistakes. Review critical actions before confirming.",
+    "zh": "AI 可能出错，请在确认前复核关键操作。"
+  },
+  "ai.assistant.askAiToPerformAdminTasksLookUpDataOrAnswerQuestio": {
+    "en": "Ask AI to perform admin tasks, look up data, or answer questions.",
+    "zh": "让 AI 执行管理任务、查询数据或回答问题"
+  },
+  "ai.assistant.componentStatesCollapsedFabExpandedTrayActiveConversa": {
+    "en": "Component states: collapsed FAB, expanded tray, active conversation.",
+    "zh": "组件状态：收起、悬浮按钮、展开托盘、活跃会话"
+  },
+  "ai.assistant.describeYourPresentationTopicAndAiWillCreateAStruct": {
+    "en": "Describe your presentation topic and AI will create a structured outline.",
+    "zh": "描述演示主题，AI 将生成结构化大纲"
+  },
+  "ai.assistant.designMockNotConnectedInMvp": {
+    "en": "Design preview (not connected in MVP).",
+    "zh": "设计稿演示（MVP 未接入）"
+  },
+  "ai.assistant.designStates": {
+    "en": "Design States",
+    "zh": "设计状态"
+  },
+  "ai.assistant.designStatesOnlyInteractiveChatUsesWorkspaceQAApis": {
+    "en": "Design states only; interactive chat uses workspace Q&A APIs.",
+    "zh": "设计状态页；仅交互式对话接入工作台 Q&A API"
+  },
+  "ai.assistant.eGQ4RoadmapForEngineeringTeam": {
+    "en": "e.g. Q4 roadmap for the engineering team",
+    "zh": "例如：工程团队 Q4 路线图"
+  },
+  "ai.assistant.generate": {
+    "en": "Generate",
+    "zh": "生成"
+  },
+  "ai.assistant.generateNewPresentation": {
+    "en": "Generate New Presentation",
+    "zh": "生成新演示文稿"
+  },
+  "ai.assistant.hiIMYourAdminCopilotHowCanIHelp": {
+    "en": "Hi, I'm your admin copilot. How can I help?",
+    "zh": "你好，我是管理 Copilot，需要什么帮助？"
+  },
+  "ai.assistant.howCanIHelp": {
+    "en": "How can I help?",
+    "zh": "需要什么帮助？"
+  },
+  "ai.assistant.listUsersInEngineering": {
+    "en": "List users in engineering",
+    "zh": "列出工程部用户"
+  },
+  "ai.assistant.modelBClaudeSonnet": {
+    "en": "Model B · Claude Sonnet",
+    "zh": "模型 B · Claude Sonnet"
+  },
+  "ai.assistant.modelCDeepseekV3": {
+    "en": "Model C · DeepSeek V3",
+    "zh": "模型 C · DeepSeek V3"
+  },
+  "ai.assistant.noDecksYetGenerateAnOutlineFromATopicBelow": {
+    "en": "No decks yet. Generate an outline from a topic below.",
+    "zh": "暂无演示文稿，在下方根据主题生成大纲"
+  },
+  "ai.assistant.openaiCompatibleGateway": {
+    "en": "OpenAI-compatible gateway",
+    "zh": "OpenAI 兼容网关"
+  },
+  "ai.assistant.outlineResult": {
+    "en": "Outline Result",
+    "zh": "大纲结果"
+  },
+  "ai.assistant.pasteCodeAndClickRunReviewResultsAppearHereAsPlain": {
+    "en": "Paste code and click Run review. Results appear here.",
+    "zh": "粘贴代码并点击运行审查，结果将显示在此处"
+  },
+  "ai.assistant.pasteCodeToReview": {
+    "en": "Paste code to review",
+    "zh": "粘贴待审查代码"
+  },
+  "ai.assistant.pasteSourceCodeHere": {
+    "en": "Paste source code here",
+    "zh": "在此粘贴源代码"
+  },
+  "ai.assistant.reviewing": {
+    "en": "Reviewing",
+    "zh": "审查中"
+  },
+  "ai.assistant.reviewResult": {
+    "en": "Review Result",
+    "zh": "审查结果"
+  },
+  "ai.assistant.runReview": {
+    "en": "Run Review",
+    "zh": "运行审查"
+  },
+  "ai.assistant.send2": {
+    "en": "Send",
+    "zh": "发送"
+  },
+  "ai.assistant.showcaseOnlyForLiveChatUseWorkspaceOrAiChatPagesW": {
+    "en": "Showcase only. For live chat, use Workspace or AI Chat pages.",
+    "zh": "仅作展示；实时对话请使用工作台或 AI 对话页"
+  },
+  "ai.assistant.showMeActiveUsers": {
+    "en": "Show me active users",
+    "zh": "显示活跃用户"
+  },
+  "ai.common.aspectRatio": {
+    "en": "Aspect Ratio",
+    "zh": "宽高比比例"
+  },
+  "ai.common.checking": {
+    "en": "Checking",
+    "zh": "检查中"
+  },
+  "ai.common.generating": {
+    "en": "Generating",
+    "zh": "生成中…"
+  },
+  "ai.common.history": {
+    "en": "History",
+    "zh": "历史"
+  },
+  "ai.common.noHistoryPersistedInMvp": {
+    "en": "No history persisted in MVP.",
+    "zh": "MVP 暂未持久化历史记录"
+  },
+  "ai.common.noSessionsCreateOne": {
+    "en": "No sessions. Create one.",
+    "zh": "暂无会话，请先创建"
+  },
+  "ai.common.runningEllipsis": {
+    "en": "Running…",
+    "zh": "运行中…"
+  },
+  "ai.common.selectOrCreateASession": {
+    "en": "Select or create a session.",
+    "zh": "选择或创建会话"
+  },
+  "ai.config.featureNameCapitalizeBothWords": {
+    "en": "Feature name capitalize both words",
+    "zh": "功能名称（每个单词首字母大写）"
+  },
+  "ai.config.mainKnowledgeStore": {
+    "en": "Main Knowledge Store",
+    "zh": "主知识库"
+  },
+  "ai.config.modelName2": {
+    "en": "Model Name *",
+    "zh": "模型名称 *"
+  },
+  "ai.config.placeholderKnowledgeBase": {
+    "en": "knowledge base",
+    "zh": "知识库"
+  },
+  "ai.config.placeholderModelDisplay": {
+    "en": "GPT-4o",
+    "zh": "GPT-4o"
+  },
+  "ai.config.preferredForm2": {
+    "en": "Preferred Form *",
+    "zh": "首选表达 *"
+  },
+  "ai.config.sourceTerm2": {
+    "en": "Source Term *",
+    "zh": "源术语 *"
+  },
+  "ai.config.systemPromptChat": {
+    "en": "Prompt Chat",
+    "zh": "系统提示词对话"
+  },
+  "ai.knowledge.createDataset2": {
+    "en": "Create Dataset",
+    "zh": "新建数据集"
+  },
+  "ai.knowledge.createDocument2": {
+    "en": "Create Document",
+    "zh": "新建文档"
+  },
+  "ai.knowledge.createKnowledgeBase2": {
+    "en": "Create Knowledge Base",
+    "zh": "新建知识库"
+  },
+  "ai.knowledge.fileName2": {
+    "en": "File Name *",
+    "zh": "文件名 *"
+  },
+  "ai.knowledge.productManual": {
+    "en": "Product Manual",
+    "zh": "产品手册"
+  },
+  "ai.knowledge.sourceImported": {
+    "en": "Imported",
+    "zh": "导入"
+  },
+  "ai.knowledge.sourceManual": {
+    "en": "Manual",
+    "zh": "手动录入"
+  },
+  "ai.knowledge.sourceScraped": {
+    "en": "Scraped",
+    "zh": "爬取"
+  },
+  "ai.knowledge.vectorMilvusCatalog": {
+    "en": "Milvus (Product Catalog)",
+    "zh": "Milvus（产品目录）"
+  },
+  "ai.knowledge.vectorPgvectorMain": {
+    "en": "pgvector (Main)",
+    "zh": "pgvector（主库）"
+  },
+  "ai.more.add": {
+    "en": "Add",
+    "zh": "添加"
+  },
+  "ai.more.addWhitelistPhrase": {
+    "en": "Add Whitelist Phrase",
+    "zh": "添加白名单短语"
+  },
+  "ai.more.category": {
+    "en": "Category",
+    "zh": "分类"
+  },
+  "ai.more.consulting": {
+    "en": "Consulting",
+    "zh": "咨询"
+  },
+  "ai.more.describeTheVideo": {
+    "en": "Describe The Video",
+    "zh": "描述视频内容"
+  },
+  "ai.more.emptyCanvasGenerateHitsPosterApi": {
+    "en": "Empty canvas generate hits poster api",
+    "zh": "空白画布；生成将调用海报 API"
+  },
+  "ai.more.generateBidOutline": {
+    "en": "Generate Bid Outline",
+    "zh": "生成投标大纲"
+  },
+  "ai.more.generatePoster": {
+    "en": "Generate Poster",
+    "zh": "生成海报"
+  },
+  "ai.more.generateVideo": {
+    "en": "Generate Video",
+    "zh": "生成视频"
+  },
+  "ai.more.infrastructure": {
+    "en": "Infrastructure",
+    "zh": "基础设施"
+  },
+  "ai.more.lexicon": {
+    "en": "Lexicon",
+    "zh": "词库"
+  },
+  "ai.more.newBiddingProject": {
+    "en": "New Bidding Project",
+    "zh": "新建投标项目"
+  },
+  "ai.more.noEntriesYet": {
+    "en": "No Entries Yet",
+    "zh": "暂无条目"
+  },
+  "ai.more.noOcrResultYet": {
+    "en": "No ocr result yet",
+    "zh": "暂无 OCR 结果"
+  },
+  "ai.more.noOutlineYetProjectsAreNotPersistedInMvp": {
+    "en": "No outline yet projects are not persisted (MVP preview only)",
+    "zh": "暂无大纲；MVP 中项目不会持久化"
+  },
+  "ai.more.noPersistedHistoryInMvpRunACheckBelowResultsStayO": {
+    "en": "No persisted history in MVP run a check below results stay o",
+    "zh": "MVP 无持久化历史；在下方运行检查，结果仅保留在页面"
+  },
+  "ai.more.noResultsYet": {
+    "en": "No Results Yet",
+    "zh": "暂无结果"
+  },
+  "ai.more.noRewriteResultYet": {
+    "en": "No rewrite result yet",
+    "zh": "暂无改写结果"
+  },
+  "ai.more.pasteDocumentTextToProofread": {
+    "en": "Paste document to proofread",
+    "zh": "粘贴待校对文档"
+  },
+  "ai.more.pasteOcrInputText": {
+    "en": "Paste Ocr Input",
+    "zh": "粘贴 OCR 输入文本"
+  },
+  "ai.more.pasteRfpRequirementsText": {
+    "en": "Paste Rfp Requirements",
+    "zh": "粘贴招标需求文本"
+  },
+  "ai.more.pasteTextToRewriteUnderYourStyleRules": {
+    "en": "Paste to rewrite under your style rules",
+    "zh": "粘贴文本，按样式规则改写"
+  },
+  "ai.more.posterContentTaglines": {
+    "en": "Poster Content Taglines",
+    "zh": "海报文案与标语"
+  },
+  "ai.more.projectName": {
+    "en": "Project Name",
+    "zh": "项目名称"
+  },
+  "ai.more.proofreadingHistory": {
+    "en": "Proofreading History",
+    "zh": "校对历史"
+  },
+  "ai.more.random": {
+    "en": "Random",
+    "zh": "随机"
+  },
+  "ai.more.requirements": {
+    "en": "Requirements",
+    "zh": "需求"
+  },
+  "ai.more.rules": {
+    "en": "Rules",
+    "zh": "规则"
+  },
+  "ai.more.ruleTreeIsNotPersistedInMvpUseRewriteToolToTestS": {
+    "en": "Rule tree is not persisted in MVP use rewrite tool to test s",
+    "zh": "MVP 中规则树未持久化，请用改写工具测试"
+  },
+  "ai.more.runOcr": {
+    "en": "Run Ocr",
+    "zh": "运行OCR"
+  },
+  "ai.more.runProofread": {
+    "en": "Run Proofread",
+    "zh": "运行校对"
+  },
+  "ai.more.runRewrite": {
+    "en": "Run Rewrite",
+    "zh": "运行改写"
+  },
+  "ai.more.seed": {
+    "en": "Seed",
+    "zh": "种子"
+  },
+  "ai.more.software": {
+    "en": "Software",
+    "zh": "软件"
+  },
+  "ai.more.templatesAreNotPersistedInMvpPasteTextOrOcrPayload": {
+    "en": "Templates are not persisted in MVP paste or ocr payload",
+    "zh": "MVP 中模板未持久化，请粘贴文本或 OCR 载荷"
+  },
+  "ai.more.videoCanvasRunGenerateToHitApi": {
+    "en": "Video canvas run generate to hit api",
+    "zh": "在视频画布运行生成以调用 API"
+  },
+  "ai.more.videoGeneration": {
+    "en": "Video Generation",
+    "zh": "视频生成"
+  },
+  "ai.more.whitelistStoredWithPrefixAllowInTheSameTableMvp": {
+    "en": "Whitelist stored with prefix allow in the same table MVP",
+    "zh": "白名单与 allow 前缀存于同表（MVP）"
+  },
+  "ai.skills.basic": {
+    "en": "basic",
+    "zh": "基础"
+  },
+  "ai.skills.createAgent2": {
+    "en": "Create Agent",
+    "zh": "新建智能体"
+  },
+  "ai.skills.createSkill2": {
+    "en": "Create Skill",
+    "zh": "新建技能"
+  },
+  "ai.skills.githubMcp": {
+    "en": "Github Mcp",
+    "zh": "GitHub MCP"
+  },
+  "ai.skills.userSearch": {
+    "en": "User Search",
+    "zh": "用户搜索"
+  },
+  "ai.workspace.aichatSessions": {
+    "en": "Aichat Sessions",
+    "zh": "AI 对话会话"
+  },
+  "ai.workspace.allChatMessages": {
+    "en": "All Chat Messages",
+    "zh": "全部对话消息"
+  },
+  "ai.workspace.alloy": {
+    "en": "Alloy",
+    "zh": "Alloy"
+  },
+  "ai.workspace.amount": {
+    "en": "Amount",
+    "zh": "金额"
+  },
+  "ai.workspace.annotateDatasetsForFineTuningRlhfAndEvaluationPipeli": {
+    "en": "Annotate datasets for fine tuning rlhf and evaluation pipeli",
+    "zh": "为微调、RLHF 与评估流水线标注数据集。"
+  },
+  "ai.workspace.askAiToHelpWithSystemAdministrationTasks": {
+    "en": "Ask to help with administration tasks",
+    "zh": "让 AI 协助系统管理任务"
+  },
+  "ai.workspace.azureTts": {
+    "en": "Azure Tts",
+    "zh": "Azure 语音合成"
+  },
+  "ai.workspace.back": {
+    "en": "Back",
+    "zh": "返回"
+  },
+  "ai.workspace.chatSessions": {
+    "en": "Chat Sessions",
+    "zh": "对话会话"
+  },
+  "ai.workspace.checkNow": {
+    "en": "Check Now",
+    "zh": "立即检查"
+  },
+  "ai.workspace.configureCheck": {
+    "en": "Configure Check",
+    "zh": "配置检查"
+  },
+  "ai.workspace.configuredProviders": {
+    "en": "Configured Providers",
+    "zh": "已配置的服务商"
+  },
+  "ai.workspace.configureSafetyCheck": {
+    "en": "Configure Safety Check",
+    "zh": "配置安全检查"
+  },
+  "ai.workspace.continueArrow": {
+    "en": "Continue Arrow",
+    "zh": "继续 →"
+  },
+  "ai.workspace.costBreakdown": {
+    "en": "Cost Breakdown",
+    "zh": "费用明细"
+  },
+  "ai.workspace.count": {
+    "en": "Count",
+    "zh": "数量"
+  },
+  "ai.workspace.dataLabeling": {
+    "en": "Data Labeling",
+    "zh": "数据标注"
+  },
+  "ai.workspace.defaultOpenaiModeration": {
+    "en": "Default Openai Moderation",
+    "zh": "默认 OpenAI 内容审核"
+  },
+  "ai.workspace.demoPayments": {
+    "en": "Demo Payments",
+    "zh": "演示支付"
+  },
+  "ai.workspace.describeTheImageYouWantToGenerate": {
+    "en": "Describe the image you want to generate",
+    "zh": "描述你想生成的图片"
+  },
+  "ai.workspace.detectionModel": {
+    "en": "Detection Model",
+    "zh": "检测模型"
+  },
+  "ai.workspace.document": {
+    "en": "Document",
+    "zh": "文档"
+  },
+  "ai.workspace.echo": {
+    "en": "Echo",
+    "zh": "Echo"
+  },
+  "ai.workspace.engine": {
+    "en": "Engine",
+    "zh": "引擎"
+  },
+  "ai.workspace.fable": {
+    "en": "Fable",
+    "zh": "Fable"
+  },
+  "ai.workspace.gainDb": {
+    "en": "Gain Db",
+    "zh": "增益 (dB)"
+  },
+  "ai.workspace.generateAudio": {
+    "en": "Generate Audio",
+    "zh": "生成音频"
+  },
+  "ai.workspace.generatedImagesWillAppearHere": {
+    "en": "Generated images will appear here",
+    "zh": "生成的图片将显示在此处"
+  },
+  "ai.workspace.generateImage": {
+    "en": "Generate Image",
+    "zh": "生成图片"
+  },
+  "ai.workspace.input": {
+    "en": "Input",
+    "zh": "输入"
+  },
+  "ai.workspace.issues": {
+    "en": "Issues",
+    "zh": "问题"
+  },
+  "ai.workspace.labelingStudio": {
+    "en": "Labeling Studio",
+    "zh": "标注工作台"
+  },
+  "ai.workspace.messages": {
+    "en": "Messages",
+    "zh": "消息"
+  },
+  "ai.workspace.modelsDocs": {
+    "en": "Models Docs",
+    "zh": "模型与文档"
+  },
+  "ai.workspace.modelsDocuments": {
+    "en": "Models Documents",
+    "zh": "模型文档"
+  },
+  "ai.workspace.newCheck": {
+    "en": "New Check",
+    "zh": "新建检查"
+  },
+  "ai.workspace.noAudioYetGenerateCallsTheTtsToolMayReturnAnApiE": {
+    "en": "No audio yet generate calls the tts tool may return an api e",
+    "zh": "暂无音频；生成将调用 TTS 工具（可能返回 API 错误）"
+  },
+  "ai.workspace.noChatSessionsYet": {
+    "en": "No chat sessions yet",
+    "zh": "暂无对话会话"
+  },
+  "ai.workspace.noDatasetsCreateOneUnder": {
+    "en": "No datasets create one under",
+    "zh": "暂无数据集，请在下方创建"
+  },
+  "ai.workspace.noPaymentRecordsYet": {
+    "en": "No payment records yet",
+    "zh": "暂无支付记录"
+  },
+  "ai.workspace.noResultGoBackAndRunTheCheck": {
+    "en": "No result go back and run the check",
+    "zh": "暂无结果，返回并运行检查"
+  },
+  "ai.workspace.openaiCompatibleGatewayConfigureAiProvidersModels": {
+    "en": "Openai compatible gateway configure providers models",
+    "zh": "OpenAI 兼容网关 — 配置提供商与模型"
+  },
+  "ai.workspace.openaiTts": {
+    "en": "Openai Tts",
+    "zh": "OpenAI TTS"
+  },
+  "ai.workspace.openDatasets": {
+    "en": "Open Datasets",
+    "zh": "打开数据集"
+  },
+  "ai.workspace.order": {
+    "en": "Order",
+    "zh": "排序"
+  },
+  "ai.workspace.pasteContentEllipsis": {
+    "en": "Paste content…",
+    "zh": "粘贴内容…"
+  },
+  "ai.workspace.pasteContentToCheck": {
+    "en": "Paste content to check",
+    "zh": "粘贴待检查内容"
+  },
+  "ai.workspace.pasteTextForSafetyScreening": {
+    "en": "Paste for safety screening",
+    "zh": "粘贴文本进行安全筛查"
+  },
+  "ai.workspace.paymentRecordSFromDemoApi": {
+    "en": "Payment Record S From Demo Api",
+    "zh": "来自演示 API 的支付记录"
+  },
+  "ai.workspace.recentActivity": {
+    "en": "Recent Activity",
+    "zh": "最近活动"
+  },
+  "ai.workspace.reviewResults": {
+    "en": "Review Results",
+    "zh": "审查结果"
+  },
+  "ai.workspace.runCheckArrow": {
+    "en": "Run Check Arrow",
+    "zh": "运行检查 →"
+  },
+  "ai.workspace.runCheckNowToSeeProofreadResults": {
+    "en": "Run check now to see proofread results",
+    "zh": "立即运行检查以查看校对结果"
+  },
+  "ai.workspace.safetyCheckResults": {
+    "en": "Safety Check Results",
+    "zh": "安全检查结果"
+  },
+  "ai.workspace.sdxl": {
+    "en": "Sdxl",
+    "zh": "SDXL"
+  },
+  "ai.workspace.session": {
+    "en": "Session",
+    "zh": "会话"
+  },
+  "ai.workspace.speed": {
+    "en": "Speed",
+    "zh": "语速"
+  },
+  "ai.workspace.strictCustom": {
+    "en": "Strict Custom",
+    "zh": "严格自定义"
+  },
+  "ai.workspace.uploadContent": {
+    "en": "Upload Content",
+    "zh": "上传内容"
+  },
+  "ai.workspace.voice": {
+    "en": "Voice",
+    "zh": "语音"
+  },
+  "auth.atLeast8Characters": {
+    "en": "At least 8 characters",
+    "zh": "至少 8 个字符"
+  },
+  "auth.brand.tagline": {
+    "en": "v2.0 · Open Core",
+    "zh": "v2.0 · 开源核心"
+  },
+  "auth.linkExpiresIn15Minutes": {
+    "en": "Link expires in 15 minutes",
+    "zh": "链接 15 分钟内有效"
+  },
+  "auth.lock.enter.password": {
+    "en": "Enter your password to unlock",
+    "zh": "输入密码以解锁"
+  },
+  "auth.login.forgotPassword": {
+    "en": "Forgot password?",
+    "zh": "忘记密码？"
+  },
+  "auth.login.rememberMe": {
+    "en": "Remember me for 30 days",
+    "zh": "30 天内记住我"
+  },
+  "auth.register.passwordMin": {
+    "en": "At least 6 characters",
+    "zh": "至少 6 个字符"
+  },
+  "auth.register.passwordPlaceholder": {
+    "en": "Min 6 characters",
+    "zh": "最少 6 个字符"
+  },
+  "auth.reset.hero.hint": {
+    "en": "Choose a strong password to secure your account. You'll use it to sign in going forward.",
+    "zh": "请设置一个强密码保护您的账户，后续登录将使用它。"
+  },
+  "auth.reset.hero.line2": {
+    "en": "Password *",
+    "zh": "密码 *"
+  },
+  "auth.verify.codeRequired": {
+    "en": "Please enter the 6-digit code.",
+    "zh": "请输入 6 位验证码。"
+  },
+  "common.basic": {
+    "en": "Basic",
+    "zh": "基础"
+  },
+  "common.copy": {
+    "en": "Copy",
+    "zh": "复制"
+  },
+  "common.create": {
+    "en": "Create",
+    "zh": "新建"
+  },
+  "common.deleteNamed": {
+    "en": "Delete \"{name}\"?",
+    "zh": "删除「{name}」？"
+  },
+  "common.fieldType.json": {
+    "en": "json",
+    "zh": "JSON"
+  },
+  "common.goBack": {
+    "en": "Go Back",
+    "zh": "返回"
+  },
+  "common.never": {
+    "en": "Never",
+    "zh": "从不"
+  },
+  "common.none": {
+    "en": "None",
+    "zh": "无"
+  },
+  "common.refresh": {
+    "en": "Refresh",
+    "zh": "刷新"
+  },
+  "common.root": {
+    "en": "Root",
+    "zh": "根级"
+  },
+  "common.saved": {
+    "en": "Saved Exclaim",
+    "zh": "已保存！"
+  },
+  "common.status.pending": {
+    "en": "Pending",
+    "zh": "待处理"
+  },
+  "common.status.ready": {
+    "en": "Ready",
+    "zh": "就绪"
+  },
+  "common.status.suspended": {
+    "en": "Suspended",
+    "zh": "已停用"
+  },
+  "common.statusDisabled": {
+    "en": "Disabled Lowercase",
+    "zh": "已禁用"
+  },
+  "common.topLevel": {
+    "en": "Top level",
+    "zh": "顶级"
+  },
+  "demo.products.createTitle": {
+    "en": "Create Product",
+    "zh": "新建商品"
+  },
+  "demo.products.placeholder.name": {
+    "en": "Wireless Keyboard Pro",
+    "zh": "无线键盘 Pro"
+  },
+  "demo.products.placeholder.nameFilter": {
+    "en": "Wireless Keyboard...",
+    "zh": "无线键盘..."
+  },
+  "docs.components.accentBorderVariantForCallOuts": {
+    "en": "Accent border variant for call outs",
+    "zh": "强调色边框变体（用于提示区块）"
+  },
+  "docs.components.activeRoles": {
+    "en": "Active roles",
+    "zh": "活跃角色"
+  },
+  "docs.components.activeTab": {
+    "en": "Active Tab",
+    "zh": "当前标签"
+  },
+  "docs.components.administrator": {
+    "en": "Administrator",
+    "zh": "管理员"
+  },
+  "docs.components.apiCalls": {
+    "en": "Api Calls",
+    "zh": "API 调用"
+  },
+  "docs.components.cannotBeChangedAfterCreation": {
+    "en": "Cannot be changed after creation",
+    "zh": "创建后不可修改"
+  },
+  "docs.components.cardWithIcon": {
+    "en": "Card With Icon",
+    "zh": "带图标的卡片"
+  },
+  "docs.components.checked": {
+    "en": "Checked",
+    "zh": "已检查"
+  },
+  "docs.components.configure": {
+    "en": "Configure",
+    "zh": "配置"
+  },
+  "docs.components.confirm": {
+    "en": "Confirm",
+    "zh": "确认"
+  },
+  "docs.components.createAKnowledgeBaseToStartIndexingDocumentsForAiR": {
+    "en": "Create A Knowledge Base To Start Indexing Documents For R",
+    "zh": "创建知识库以开始为 AI 检索索引文档"
+  },
+  "docs.components.createFirstUser": {
+    "en": "Create First User",
+    "zh": "创建第一个用户"
+  },
+  "docs.components.defaultCard": {
+    "en": "Default Card",
+    "zh": "默认卡片"
+  },
+  "docs.components.deleteThisItemPermanently": {
+    "en": "Delete this item permanently",
+    "zh": "永久删除此项"
+  },
+  "docs.components.deleteUserAliceChenThisCannotBeUndone": {
+    "en": "Delete user alice chen this cannot be undone",
+    "zh": "删除用户 Alice Chen？此操作不可撤销"
+  },
+  "docs.components.details": {
+    "en": "Details",
+    "zh": "详情"
+  },
+  "docs.components.developer": {
+    "en": "Developer",
+    "zh": "开发者"
+  },
+  "docs.components.dismissible": {
+    "en": "Dismissible",
+    "zh": "可关闭"
+  },
+  "docs.components.enterText": {
+    "en": "Enter",
+    "zh": "输入文本"
+  },
+  "docs.components.enterValue": {
+    "en": "Enter Value",
+    "zh": "输入值"
+  },
+  "docs.components.error": {
+    "en": "error",
+    "zh": "错误"
+  },
+  "docs.components.errors": {
+    "en": "Errors",
+    "zh": "错误"
+  },
+  "docs.components.errorState": {
+    "en": "State",
+    "zh": "错误状态"
+  },
+  "docs.components.featureFlag": {
+    "en": "Feature Flag",
+    "zh": "功能开关"
+  },
+  "docs.components.highlightedCard": {
+    "en": "Highlighted Card",
+    "zh": "高亮卡片"
+  },
+  "docs.components.info": {
+    "en": "Info",
+    "zh": "信息"
+  },
+  "docs.components.invalidUsernameOrPasswordPleaseTryAgain": {
+    "en": "Invalid username or password please try again",
+    "zh": "用户名或密码无效，请重试"
+  },
+  "docs.components.large": {
+    "en": "Large",
+    "zh": "大"
+  },
+  "docs.components.logout": {
+    "en": "Logout",
+    "zh": "退出"
+  },
+  "docs.components.medium": {
+    "en": "Medium",
+    "zh": "中"
+  },
+  "docs.components.noKnowledgeBasesYet": {
+    "en": "No knowledge bases yet",
+    "zh": "暂无知识库"
+  },
+  "docs.components.noUsersFound": {
+    "en": "No Users Found",
+    "zh": "未找到用户"
+  },
+  "docs.components.openConfirmDialog": {
+    "en": "Open Confirm Dialog",
+    "zh": "打开确认对话框"
+  },
+  "docs.components.openFormDialog": {
+    "en": "Open Form Dialog",
+    "zh": "打开表单对话框"
+  },
+  "docs.components.outline": {
+    "en": "Outline",
+    "zh": "大纲"
+  },
+  "docs.components.primary": {
+    "en": "Primary",
+    "zh": "主色"
+  },
+  "docs.components.readonly": {
+    "en": "Readonly",
+    "zh": "只读"
+  },
+  "docs.components.selectModel": {
+    "en": "Select Model",
+    "zh": "选择模型"
+  },
+  "docs.components.small": {
+    "en": "Small",
+    "zh": "小"
+  },
+  "docs.components.strataAdminDesignSystemAtomsMoleculesAndOrganisms": {
+    "en": "Strata admin design atoms molecules and organisms",
+    "zh": "Strata Admin 设计体系：原子、分子与有机体"
+  },
+  "docs.components.testModeIsEnabledNoRealPaymentsWillBeProcessed": {
+    "en": "Test mode is enabled no real payments will be processed",
+    "zh": "测试模式已开启，不会处理真实支付"
+  },
+  "docs.components.thisFeatureRequiresPro": {
+    "en": "This feature requires pro",
+    "zh": "此功能需要 Pro 版"
+  },
+  "docs.components.thisFieldIsRequired": {
+    "en": "This field is required",
+    "zh": "此字段为必填"
+  },
+  "docs.components.toggleFullscreenMode": {
+    "en": "Toggle Fullscreen Mode",
+    "zh": "切换全屏模式"
+  },
+  "docs.components.totalUsers": {
+    "en": "Total Users",
+    "zh": "总计用户"
+  },
+  "docs.components.tryAdjustingYourSearchFiltersOrCreateANewUser": {
+    "en": "Try adjusting your search filters or create a new user",
+    "zh": "请调整筛选条件或新建用户"
+  },
+  "docs.components.unchecked": {
+    "en": "Unchecked",
+    "zh": "未选中"
+  },
+  "docs.components.useForFeatureSectionsDashboardsAndStatGroups": {
+    "en": "Use for feature sections dashboards and stat groups",
+    "zh": "用于功能区块、仪表盘与统计分组"
+  },
+  "docs.components.userCreatedSuccessfully": {
+    "en": "User Created Successfully",
+    "zh": "用户创建成功"
+  },
+  "docs.components.viewer": {
+    "en": "Viewer",
+    "zh": "查看者"
+  },
+  "docs.components.warning": {
+    "en": "Warning",
+    "zh": "警告"
+  },
+  "docs.components.withHint": {
+    "en": "With Hint",
+    "zh": "带提示"
+  },
+  "docs.cover.30Components": {
+    "en": "30+ Components",
+    "zh": "30+ 组件"
+  },
+  "docs.cover.50Screens": {
+    "en": "50+ Screens",
+    "zh": "50+ 界面"
+  },
+  "docs.cover.sitemapAllScreens": {
+    "en": "Sitemap All Screens",
+    "zh": "站点地图 · 全部界面"
+  },
+  "docs.foundations.borderRadius": {
+    "en": "Border Radius",
+    "zh": "边框圆角"
+  },
+  "docs.foundations.colorPalette": {
+    "en": "Color Palette",
+    "zh": "颜色调色板"
+  },
+  "docs.foundations.darkModeTitle": {
+    "en": "Dark Mode Title",
+    "zh": "深色模式标题"
+  },
+  "docs.foundations.designTokensColorTypographySpacingRadiusElevation": {
+    "en": "Design tokens color typography spacing radius elevation",
+    "zh": "设计令牌：颜色、字体、间距、圆角、层级"
+  },
+  "docs.foundations.elevationLayers": {
+    "en": "Elevation Layers",
+    "zh": "层级阴影"
+  },
+  "docs.foundations.font": {
+    "en": "Font",
+    "zh": "字体"
+  },
+  "docs.foundations.full": {
+    "en": "Full",
+    "zh": "完整"
+  },
+  "docs.foundations.mono": {
+    "en": "Mono",
+    "zh": "等宽"
+  },
+  "docs.foundations.spacingScale": {
+    "en": "Spacing Scale",
+    "zh": "间距刻度"
+  },
+  "docs.foundations.statusBadges": {
+    "en": "Status Badges",
+    "zh": "状态徽章"
+  },
+  "docs.foundations.typography": {
+    "en": "Typography",
+    "zh": "字体排版"
+  },
+  "error.new.password.must.be.at.least.6.characters": {
+    "en": "New password must be at least 6 characters.",
+    "zh": "新密码至少 6 个字符。"
+  },
+  "error.password.must.be.at.least.6.characters": {
+    "en": "Password must be at least 6 characters.",
+    "zh": "密码至少 6 个字符。"
+  },
+  "error.set.up.your.team.s.admin.workspace.in.under.2.mi": {
+    "en": "Set up your team's admin workspace in under 2 minutes. No credit card required.",
+    "zh": "两分钟内搭建团队管理空间，无需信用卡。"
+  },
+  "login.feature.ai": {
+    "en": "AI Pack · LLM · RAG · Agent orchestration",
+    "zh": "AI 套件 · 大模型 · RAG · 智能体编排"
+  },
+  "login.feature.i18n": {
+    "en": "i18n · Chinese & English · configurable default",
+    "zh": "国际化 · 中英文 · 可配置默认语言"
+  },
+  "login.feature.rbac": {
+    "en": "RBAC · Multi-tenant · JWT Authentication",
+    "zh": "RBAC · 多租户 · JWT 认证"
+  },
+  "nav.dashboard": {
+    "en": "Dashboard",
+    "zh": "仪表盘"
+  },
+  "nav.webhooks": {
+    "en": "Webhooks",
+    "zh": "Webhook 管理"
+  },
+  "nav.workspace": {
+    "en": "Workspace",
+    "zh": "工作台"
+  },
+  "page.error.access.denied": {
+    "en": "Access Denied",
+    "zh": "访问被拒绝"
+  },
+  "page.error.access.denied.desc": {
+    "en": "You don't have permission to view this page. Contact your administrator if you believe this is a mistake.",
+    "zh": "您无权查看此页面。若认为有误，请联系管理员。"
+  },
+  "page.error.badge": {
+    "en": "Error {code}",
+    "zh": "错误 {code}"
+  },
+  "page.error.load.failed": {
+    "en": "Failed to load page. Please refresh.",
+    "zh": "页面加载失败，请刷新重试。"
+  },
+  "page.error.server": {
+    "en": "Server Error",
+    "zh": "服务器错误"
+  },
+  "page.error.server.desc": {
+    "en": "Something went wrong on our end. Our team has been notified and we're working to fix it. Please try again in a moment.",
+    "zh": "服务端出现问题，我们已收到通知并正在修复，请稍后再试。"
+  },
+  "page.forbidden.desc": {
+    "en": "You don't have permission to access this resource.",
+    "zh": "您无权访问此资源。"
+  },
+  "page.forbidden.title": {
+    "en": "Access Forbidden",
+    "zh": "禁止访问"
+  },
+  "page.not.found.desc": {
+    "en": "The page you're looking for doesn't exist or has been moved.",
+    "zh": "您访问的页面不存在或已被移动。"
+  },
+  "page.not.found.title": {
+    "en": "Page Not Found",
+    "zh": "页面不存在"
+  },
+  "page.return.dashboard": {
+    "en": "Return to Dashboard",
+    "zh": "返回仪表盘"
+  },
+  "page.states.board": {
+    "en": "States Board",
+    "zh": "状态面板"
+  },
+  "page.states.create.first": {
+    "en": "Create First Record",
+    "zh": "创建首条记录"
+  },
+  "page.states.delete.desc": {
+    "en": "Are you sure you want to delete this record? This action cannot be undone and will permanently remove all associated data.",
+    "zh": "确定删除此记录？此操作不可撤销，将永久删除所有关联数据。"
+  },
+  "page.states.delete.dialog": {
+    "en": "Delete Confirm Dialog",
+    "zh": "删除确认对话框"
+  },
+  "page.states.delete.title": {
+    "en": "Delete Record",
+    "zh": "删除记录"
+  },
+  "page.states.forbidden": {
+    "en": "Forbidden",
+    "zh": "禁止访问"
+  },
+  "page.states.loading.skeleton": {
+    "en": "Loading skeleton state",
+    "zh": "加载骨架屏状态"
+  },
+  "page.states.no.data": {
+    "en": "No Data",
+    "zh": "暂无数据"
+  },
+  "page.states.no.permission": {
+    "en": "No permission to access",
+    "zh": "无访问权限"
+  },
+  "page.states.no.records": {
+    "en": "No records found. Try adjusting your filters.",
+    "zh": "未找到记录，请调整筛选条件。"
+  },
+  "page.states.not.found": {
+    "en": "Not Found",
+    "zh": "未找到"
+  },
+  "page.states.page.not.exist": {
+    "en": "Page doesn't exist",
+    "zh": "页面不存在"
+  },
+  "page.states.show.delete": {
+    "en": "Show Delete Confirm",
+    "zh": "显示删除确认"
+  },
+  "pages.states.goHome": {
+    "en": "Go Home",
+    "zh": "返回首页"
+  },
+  "plugins.aiPluginEmpty.aiPackNotEnabled": {
+    "en": "AI Pack not enabled",
+    "zh": "AI 套件未启用"
+  },
+  "plugins.aiPluginEmpty.unlockAiPoweredFeatures": {
+    "en": "Unlock Powered Features",
+    "zh": "解锁 AI 驱动功能"
+  },
+  "plugins.card.ai.desc": {
+    "en": "LLM providers, knowledge bases, agents, and office tools",
+    "zh": "大模型提供商、知识库、智能体与办公工具"
+  },
+  "plugins.card.payments.desc": {
+    "en": "Stripe Checkout — set STRIPE_API_KEY in env",
+    "zh": "Stripe Checkout — 在环境变量中设置 STRIPE_API_KEY"
+  },
+  "plugins.card.payments.name": {
+    "en": "Payments / Stripe",
+    "zh": "支付 / Stripe"
+  },
+  "plugins.card.storage.desc": {
+    "en": "Local filesystem (default). Other providers via plugins.",
+    "zh": "本地文件系统（默认），其他存储通过插件接入。"
+  },
+  "plugins.common.recentPayments": {
+    "en": "Recent Payments",
+    "zh": "最近支付"
+  },
+  "plugins.config.save.hint": {
+    "en": "Save via application.yml / env — no fake success.",
+    "zh": "通过 application.yml / 环境变量保存 — 不会伪造成功提示。"
+  },
+  "plugins.paymentsStripe.callsPostDemoPayments": {
+    "en": "Calls post demo payments",
+    "zh": "调用岗位演示支付"
+  },
+  "plugins.paymentsStripe.createCheckout": {
+    "en": "Create Checkout",
+    "zh": "创建结账"
+  },
+  "plugins.paymentsStripe.currency": {
+    "en": "Currency",
+    "zh": "货币"
+  },
+  "plugins.paymentsStripe.launchCheckout": {
+    "en": "Launch Checkout",
+    "zh": "发起结账"
+  },
+  "plugins.paymentsStripe.paymentsStripeTitle": {
+    "en": "Payments Stripe Title",
+    "zh": "支付Stripe标题"
+  },
+  "plugins.paymentsStripe.secretKeyLowercase": {
+    "en": "Secret Key Lowercase",
+    "zh": "密钥"
+  },
+  "plugins.paymentsStripe.sessionUrl": {
+    "en": "Session Url",
+    "zh": "会话URL"
+  },
+  "plugins.paymentsStripe.stripePaymentGatewayActive": {
+    "en": "Stripe payment gateway active",
+    "zh": "Stripe 支付网关已启用"
+  },
+  "plugins.paymentsStripe.successCancelUrlsDefaultTo": {
+    "en": "Success cancel urls default to",
+    "zh": "成功/取消 URL 默认为"
+  },
+  "plugins.paymentsStripe.webhookUpdatesPaymentStatus": {
+    "en": "Webhook updates payment status",
+    "zh": "Webhook 更新支付状态"
+  },
+  "plugins.pluginsOverview.active2": {
+    "en": "Active",
+    "zh": "启用"
+  },
+  "plugins.pluginsOverview.inactive": {
+    "en": "Inactive",
+    "zh": "未激活"
+  },
+  "plugins.pluginsOverview.installedIntegrationModules": {
+    "en": "Installed Integration Modules",
+    "zh": "已安装的集成模块"
+  },
+  "plugins.storageSettings.bucketName": {
+    "en": "Bucket Name",
+    "zh": "存储桶名称"
+  },
+  "plugins.storageSettings.configuredViaStrataStorageLocalBasePath": {
+    "en": "Configured via strata storage local base path",
+    "zh": "通过 Strata 本地存储路径配置"
+  },
+  "plugins.storageSettings.endpoint": {
+    "en": "Endpoint",
+    "zh": "端点"
+  },
+  "plugins.storageSettings.localFilesystem": {
+    "en": "Local Filesystem",
+    "zh": "本地文件系统"
+  },
+  "plugins.storageSettings.localStoragePluginActive": {
+    "en": "Local storage plugin active",
+    "zh": "本地存储插件活跃"
+  },
+  "plugins.storageSettings.localStoragePluginNotActive": {
+    "en": "Local storage plugin not active",
+    "zh": "本地存储插件未活跃"
+  },
+  "plugins.storageSettings.minioPluginNotBundled": {
+    "en": "Minio plugin not bundled",
+    "zh": "未内置 MinIO 插件"
+  },
+  "plugins.storageSettings.ossPluginNotBundled": {
+    "en": "Oss plugin not bundled",
+    "zh": "未内置 OSS 插件"
+  },
+  "plugins.storageSettings.providerAliyunOss": {
+    "en": "Aliyun OSS",
+    "zh": "阿里云 OSS"
+  },
+  "plugins.storageSettings.providerAwsS3": {
+    "en": "AWS S3",
+    "zh": "AWS S3"
+  },
+  "plugins.storageSettings.providerMinio": {
+    "en": "MinIO",
+    "zh": "MinIO"
+  },
+  "plugins.storageSettings.region": {
+    "en": "Region",
+    "zh": "地区"
+  },
+  "plugins.storageSettings.s3PluginNotBundled": {
+    "en": "S 3 Plugin Not Bundled",
+    "zh": "未内置 S3 插件"
+  },
+  "plugins.storageSettings.uploadPath": {
+    "en": "Upload Path",
+    "zh": "上传路径"
+  },
+  "pro.blog.placeholderPostContent": {
+    "en": "Write the post content",
+    "zh": "撰写文章内容"
+  },
+  "pro.blog.placeholderPostSummary": {
+    "en": "Short summary",
+    "zh": "简短摘要"
+  },
+  "pro.blog.placeholderPostTitle": {
+    "en": "Post title",
+    "zh": "文章标题"
+  },
+  "pro.tenantBilling.fromApiSystemTenants": {
+    "en": "From Api Tenants",
+    "zh": "来自 API：/system/tenants"
+  },
+  "pro.tenantBilling.openPayments": {
+    "en": "Open Payments",
+    "zh": "打开支付"
+  },
+  "pro.tenantBilling.recurringPlansQuotasPro": {
+    "en": "Recurring plans quotas pro",
+    "zh": "订阅计划与配额（Pro）"
+  },
+  "pro.tenantBilling.stripeCheckoutRecords": {
+    "en": "Stripe Checkout Records",
+    "zh": "Stripe 结账记录"
+  },
+  "pro.tenantBilling.subscriptionBilling": {
+    "en": "Subscription Billing",
+    "zh": "订阅计费"
+  },
+  "pro.workflow.definitionJson": {
+    "en": "Definition Json",
+    "zh": "定义 JSON"
+  },
+  "pro.workflow.deleteWorkflow": {
+    "en": "Delete this workflow definition?",
+    "zh": "删除此工作流定义？"
+  },
+  "pro.workflow.noWorkflowsYet": {
+    "en": "No Workflows Yet",
+    "zh": "暂无工作流"
+  },
+  "pro.workflow.plusCreateWorkflow": {
+    "en": "Plus Create Workflow",
+    "zh": "+ 创建工作流"
+  },
+  "settings.apiKeys.copyWarning": {
+    "en": "Copy it now wont see again",
+    "zh": "请立即复制，关闭后将无法再次查看"
+  },
+  "settings.apiKeys.create": {
+    "en": "Create Api Key",
+    "zh": "创建API密钥"
+  },
+  "settings.apiKeys.empty": {
+    "en": "No api keys yet",
+    "zh": "暂无 API Key"
+  },
+  "settings.apiKeys.field.name": {
+    "en": "Key Name",
+    "zh": "密钥名称"
+  },
+  "settings.apiKeys.generate": {
+    "en": "Generate Key",
+    "zh": "生成密钥"
+  },
+  "settings.apiKeys.generatedTitle": {
+    "en": "Api Key Generated",
+    "zh": "API 密钥已生成"
+  },
+  "settings.apiKeys.newKey": {
+    "en": "New Key",
+    "zh": "新建密钥"
+  },
+  "settings.apiKeys.permissions": {
+    "en": "Permissions",
+    "zh": "权限"
+  },
+  "settings.apiKeys.placeholder.name": {
+    "en": "Eg Production App",
+    "zh": "例如：production-app"
+  },
+  "settings.apiKeys.plaintextWarning": {
+    "en": "Plaintext keys shown once",
+    "zh": "明文密钥仅显示一次"
+  },
+  "settings.apiKeys.subtitle": {
+    "en": "Programmatic access keys hashed",
+    "zh": "程序化访问密钥（哈希存储）"
+  },
+  "settings.apiKeys.used": {
+    "en": "Used",
+    "zh": "已用"
+  },
+  "settings.appearance.dark": {
+    "en": "Dark",
+    "zh": "深色"
+  },
+  "settings.appearance.densityCompact": {
+    "en": "Compact",
+    "zh": "紧凑"
+  },
+  "settings.appearance.densityCompactDesc": {
+    "en": "36px rows — more data per screen",
+    "zh": "36px 行高 — 单屏显示更多数据"
+  },
+  "settings.appearance.densityDefault": {
+    "en": "Default",
+    "zh": "默认"
+  },
+  "settings.appearance.densityDefaultDesc": {
+    "en": "48px rows — comfortable reading",
+    "zh": "48px 行高 — 舒适阅读"
+  },
+  "settings.appearance.light": {
+    "en": "Light",
+    "zh": "浅色"
+  },
+  "settings.language.enLabel": {
+    "en": "English",
+    "zh": "英语"
+  },
+  "settings.language.regionChina": {
+    "en": "China",
+    "zh": "中国"
+  },
+  "settings.language.regionUs": {
+    "en": "United States",
+    "zh": "美国"
+  },
+  "settings.language.zhLabel": {
+    "en": "Chinese (Simplified)",
+    "zh": "简体中文"
+  },
+  "settings.language.zhNative": {
+    "en": "简体中文",
+    "zh": "简体中文"
+  },
+  "settings.notifications.email": {
+    "en": "Email notifications",
+    "zh": "邮件通知"
+  },
+  "settings.notifications.emailDesc": {
+    "en": "Receive account and system alerts by email",
+    "zh": "通过邮件接收账户与系统提醒"
+  },
+  "settings.notifications.inApp": {
+    "en": "In-app notifications",
+    "zh": "应用内通知"
+  },
+  "settings.notifications.inAppDesc": {
+    "en": "Show alerts inside the admin console",
+    "zh": "在管理控制台内显示提醒"
+  },
+  "settings.notifications.marketing": {
+    "en": "Product updates",
+    "zh": "产品动态"
+  },
+  "settings.notifications.marketingDesc": {
+    "en": "New features, changelog, and platform announcements",
+    "zh": "新功能、更新日志与平台公告"
+  },
+  "settings.notifications.pageSubtitle": {
+    "en": "Choose how you receive notifications",
+    "zh": "选择通知接收方式"
+  },
+  "settings.notifications.pageTitle": {
+    "en": "Notification preferences",
+    "zh": "通知偏好"
+  },
+  "settings.notifications.security": {
+    "en": "Security alerts",
+    "zh": "安全提醒"
+  },
+  "settings.notifications.securityDesc": {
+    "en": "Login from new device, API key changes, lockouts",
+    "zh": "新设备登录、API 密钥变更、账户锁定等"
+  },
+  "settings.security.field.newPassword": {
+    "en": "New Password *",
+    "zh": "新密码 *"
+  },
+  "settings.site.aboutLicense": {
+    "en": "License",
+    "zh": "许可证"
+  },
+  "settings.site.aboutProduct": {
+    "en": "Product",
+    "zh": "产品"
+  },
+  "settings.site.aboutStack": {
+    "en": "Stack",
+    "zh": "技术栈"
+  },
+  "settings.site.aboutVersion": {
+    "en": "Version",
+    "zh": "版本"
+  },
+  "settings.site.aiPackDesc": {
+    "en": "Enable AI features and navigation group",
+    "zh": "启用 AI 功能与导航分组"
+  },
+  "settings.site.antiDebug": {
+    "en": "Anti-Debug",
+    "zh": "反调试"
+  },
+  "settings.site.antiDebugDesc": {
+    "en": "Detect and block developer tools",
+    "zh": "检测并阻止开发者工具"
+  },
+  "settings.site.captcha": {
+    "en": "Login Captcha",
+    "zh": "登录验证码"
+  },
+  "settings.site.captchaDesc": {
+    "en": "Require CAPTCHA on login form",
+    "zh": "登录表单需要验证码"
+  },
+  "settings.site.darkModeDesc": {
+    "en": "Allow users to toggle dark theme",
+    "zh": "允许用户切换深色主题"
+  },
+  "settings.site.fullscreen": {
+    "en": "Fullscreen",
+    "zh": "全屏模式"
+  },
+  "settings.site.fullscreenDesc": {
+    "en": "Enable fullscreen mode toggle",
+    "zh": "启用全屏模式切换"
+  },
+  "settings.site.i18nDesc": {
+    "en": "Enable multi-language support",
+    "zh": "启用多语言支持"
+  },
+  "settings.site.lockScreenDesc": {
+    "en": "Auto-lock screen after idle timeout",
+    "zh": "空闲超时后自动锁屏"
+  },
+  "settings.site.loginLock": {
+    "en": "Login Lock",
+    "zh": "登录锁定"
+  },
+  "settings.site.loginLockDesc": {
+    "en": "Lock account after failed attempts",
+    "zh": "登录失败后锁定账户"
+  },
+  "settings.site.multiTenant": {
+    "en": "Multi-Tenant",
+    "zh": "多租户"
+  },
+  "settings.site.multiTenantDesc": {
+    "en": "Enable tenant switching and isolation",
+    "zh": "启用租户切换与隔离"
+  },
+  "settings.site.sectionSecurity": {
+    "en": "Security",
+    "zh": "安全"
+  },
+  "settings.site.sectionUx": {
+    "en": "UX Features",
+    "zh": "体验功能"
+  },
+  "settings.site.subtitle": {
+    "en": "Global platform configuration",
+    "zh": "全局平台配置"
+  },
+  "settings.site.tagsView": {
+    "en": "Tags View",
+    "zh": "标签页导航"
+  },
+  "settings.site.tagsViewDesc": {
+    "en": "Show multi-tab navigation bar",
+    "zh": "显示多标签页导航栏"
+  },
+  "settings.site.watermarkDesc": {
+    "en": "Show username watermark on sensitive pages",
+    "zh": "在敏感页面显示用户名水印"
+  },
+  "settings.team.footer": {
+    "en": "Manage roles and invites",
+    "zh": "管理角色与邀请"
+  },
+  "settings.team.membersSuffix": {
+    "en": "Members From Users",
+    "zh": "来自系统用户的成员"
+  },
+  "settings.team.noMatch": {
+    "en": "No Users Match",
+    "zh": "没有匹配的用户"
+  },
+  "settings.team.searchPlaceholder": {
+    "en": "Search username or nickname",
+    "zh": "搜索用户名或昵称"
+  },
+  "settings.team.title": {
+    "en": "Team",
+    "zh": "团队"
+  },
+  "shell.admin": {
+    "en": "Admin",
+    "zh": "管理员"
+  },
+  "shell.aliceChenJoined3MinutesAgo": {
+    "en": "alice.chen joined 3 minutes ago",
+    "zh": "alice.chen 3 分钟前加入"
+  },
+  "shell.copied": {
+    "en": "Copied",
+    "zh": "已复制"
+  },
+  "shell.favorite.remove": {
+    "en": "Remove",
+    "zh": "移除"
+  },
+  "shell.home": {
+    "en": "Home",
+    "zh": "首页"
+  },
+  "shell.layout.accent": {
+    "en": "Accent",
+    "zh": "强调色"
+  },
+  "shell.layout.breadcrumb": {
+    "en": "Breadcrumb",
+    "zh": "面包屑"
+  },
+  "shell.layout.colorWeakMode": {
+    "en": "Color Weak Mode",
+    "zh": "颜色色弱模式"
+  },
+  "shell.layout.copyConfig": {
+    "en": "Copy Config",
+    "zh": "复制配置"
+  },
+  "shell.layout.copyHint": {
+    "en": "Copy layout config hint",
+    "zh": "复制当前布局配置 JSON"
+  },
+  "shell.layout.customColors": {
+    "en": "Custom Colors",
+    "zh": "自定义颜色"
+  },
+  "shell.layout.display": {
+    "en": "Display",
+    "zh": "显示"
+  },
+  "shell.layout.enableLockScreen": {
+    "en": "Enable Lock Screen",
+    "zh": "启用锁定屏幕"
+  },
+  "shell.layout.fixedHeader": {
+    "en": "Fixed Header",
+    "zh": "固定顶栏"
+  },
+  "shell.layout.global": {
+    "en": "Global",
+    "zh": "全局"
+  },
+  "shell.layout.grayMode": {
+    "en": "Gray Mode",
+    "zh": "灰色模式"
+  },
+  "shell.layout.interface": {
+    "en": "Interface",
+    "zh": "界面"
+  },
+  "shell.layout.title": {
+    "en": "Layout",
+    "zh": "布局"
+  },
+  "shell.layout.watermark": {
+    "en": "Watermark",
+    "zh": "水印"
+  },
+  "shell.recent": {
+    "en": "Recent",
+    "zh": "最近访问"
+  },
+  "shell.search.close": {
+    "en": "Close",
+    "zh": "关闭"
+  },
+  "shell.search.navigate": {
+    "en": "Navigate",
+    "zh": "移动选择"
+  },
+  "shell.search.noResults": {
+    "en": "No results for",
+    "zh": "未找到与以下关键词匹配的结果："
+  },
+  "shell.search.open": {
+    "en": "Open",
+    "zh": "打开"
+  },
+  "shell.search.placeholder": {
+    "en": "Search pages, settings, features...",
+    "zh": "搜索页面、设置与功能…"
+  },
+  "shell.search.resultCount": {
+    "en": "{n} results",
+    "zh": "{n} 个结果"
+  },
+  "shell.tab.close": {
+    "en": "Close",
+    "zh": "关闭"
+  },
+  "shell.tab.closeAll": {
+    "en": "Close All",
+    "zh": "全部关闭"
+  },
+  "shell.tab.closeOthers": {
+    "en": "Close Others",
+    "zh": "关闭其它"
+  },
+  "shell.tab.exitFullscreen": {
+    "en": "Exit Full Screen",
+    "zh": "退出全屏"
+  },
+  "shell.tab.favorite": {
+    "en": "Favorite",
+    "zh": "收藏"
+  },
+  "shell.tab.fullscreen": {
+    "en": "Full Screen",
+    "zh": "当前页全屏"
+  },
+  "shell.tab.refresh": {
+    "en": "Refresh",
+    "zh": "刷新"
+  },
+  "shell.tlsCertExpiresIn14Days": {
+    "en": "TLS cert expires in 14 days",
+    "zh": "TLS 证书 14 天后到期"
+  },
+  "shell.v241DeployedToProduction": {
+    "en": "v2.4.1 deployed to production",
+    "zh": "v2.4.1 已部署至生产环境"
+  },
+  "system.announcements.newAnnouncement2": {
+    "en": "New Announcement",
+    "zh": "新建公告"
+  },
+  "system.announcements.placeholderAnnouncementBody": {
+    "en": "Write your announcement—",
+    "zh": "撰写公告内容—"
+  },
+  "system.announcements.placeholderAnnouncementTitle": {
+    "en": "Announcement title",
+    "zh": "公告标题"
+  },
+  "system.clients.placeholderAppName": {
+    "en": "My Application",
+    "zh": "我的应用"
+  },
+  "system.clients.registerClient2": {
+    "en": "Register Client",
+    "zh": "注册客户端"
+  },
+  "system.departments.createDepartment2": {
+    "en": "Create Department",
+    "zh": "新建部门"
+  },
+  "system.departments.placeholderDepartment": {
+    "en": "Engineering",
+    "zh": "工程部"
+  },
+  "system.dictionaries.placeholderDictTypeLabel": {
+    "en": "User Status",
+    "zh": "用户状态"
+  },
+  "system.emailTemplates.placeholderEmailBody": {
+    "en": "Write the email body—",
+    "zh": "撰写邮件正文—"
+  },
+  "system.emailTemplates.placeholderEmailSubject": {
+    "en": "Welcome to {{workspace_name}}!",
+    "zh": "欢迎使用 {{workspace_name}}！"
+  },
+  "system.emailTemplates.placeholderEmailTemplateName": {
+    "en": "Welcome Email",
+    "zh": "欢迎邮件"
+  },
+  "system.i18n.createTranslation": {
+    "en": "Create translation",
+    "zh": "新建翻译"
+  },
+  "system.i18n.deleteTranslationKey": {
+    "en": "Delete this translation key?",
+    "zh": "删除此翻译键？"
+  },
+  "system.i18n.langChinese": {
+    "en": "Chinese (zh)",
+    "zh": "中文"
+  },
+  "system.i18n.langEnglish": {
+    "en": "English (en)",
+    "zh": "英文"
+  },
+  "system.i18n.manageTranslationKeysForAllSupported": {
+    "en": "Manage translation keys for all supported languages",
+    "zh": "管理所有支持语言的翻译键"
+  },
+  "system.i18n.updatedAt": {
+    "en": "Updated at",
+    "zh": "更新时间"
+  },
+  "system.i18n.updatedBy": {
+    "en": "Updated by",
+    "zh": "更新人"
+  },
+  "system.menus.createMenu2": {
+    "en": "Create Menu",
+    "zh": "新建菜单"
+  },
+  "system.parameters.createParameter2": {
+    "en": "Create Parameter",
+    "zh": "新建参数"
+  },
+  "system.posts.createPost2": {
+    "en": "Create Post",
+    "zh": "新建岗位"
+  },
+  "system.posts.placeholderPostName": {
+    "en": "Development Lead",
+    "zh": "研发负责人"
+  },
+  "system.roles.codeRequired": {
+    "en": "Role Code *",
+    "zh": "角色编码 *"
+  },
+  "system.roles.createTitle": {
+    "en": "Create Role",
+    "zh": "新建角色"
+  },
+  "system.siteSettings.about": {
+    "en": "About",
+    "zh": "关于"
+  },
+  "system.siteSettings.failedLoginsBeforeAccountLock": {
+    "en": "Failed logins before account lock",
+    "zh": "账户锁定前的失败登录次数"
+  },
+  "system.siteSettings.lockScreenIdleMinutes": {
+    "en": "Lock screen idle (minutes)",
+    "zh": "锁屏空闲时间（分钟）"
+  },
+  "system.siteSettings.maxLoginAttempts": {
+    "en": "Max login attempts",
+    "zh": "最大登录尝试次数"
+  },
+  "system.siteSettings.minutesOfInactivityBeforeAutoLock": {
+    "en": "Minutes of inactivity before auto-lock",
+    "zh": "自动锁屏前的空闲分钟数"
+  },
+  "system.siteSettings.passwordMinLength": {
+    "en": "Password min length",
+    "zh": "密码最小长度"
+  },
+  "system.siteSettings.thresholds": {
+    "en": "Thresholds",
+    "zh": "阈值"
+  },
+  "system.sessions.userAgent": {
+    "en": "User Agent",
+    "zh": "用户代理"
+  },
+  "system.users.createTitle": {
+    "en": "Create User",
+    "zh": "新建用户"
+  },
+  "system.users.field.passwordRequired": {
+    "en": "password?",
+    "zh": "密码？"
+  },
+  "system.users.passwordPlaceholder": {
+    "en": "Min. 6 characters",
+    "zh": "至少 6 个字符"
+  },
+  "system.webhooks.addWebhook2": {
+    "en": "Add Webhook",
+    "zh": "添加 Webhook"
+  },
+  "system.webhooks.placeholderWebhookName": {
+    "en": "Slack Alerts",
+    "zh": "Slack 告警"
+  },
+  "system.webhooks.url": {
+    "en": "URL *",
+    "zh": "URL"
+  },
+  "theme.sidebar.carbon": {
+    "en": "Carbon",
+    "zh": "Carbon"
+  },
+  "theme.sidebar.carbon.desc": {
+    "en": "IBM Carbon — charcoal with amber accent",
+    "zh": "IBM Carbon — 炭灰配琥珀强调色"
+  },
+  "theme.sidebar.crimson": {
+    "en": "Crimson",
+    "zh": "绯红"
+  },
+  "theme.sidebar.crimson.desc": {
+    "en": "Resend / Upstash — warm dark with rose accent",
+    "zh": "Resend / Upstash — 暖色深色配玫瑰强调色"
+  },
+  "theme.sidebar.custom": {
+    "en": "Custom",
+    "zh": "自定义"
+  },
+  "theme.sidebar.custom.desc": {
+    "en": "Your own colors — pick sidebar bg and accent",
+    "zh": "自定义配色 — 选择侧栏背景与强调色"
+  },
+  "theme.sidebar.forest": {
+    "en": "Forest",
+    "zh": "森林绿"
+  },
+  "theme.sidebar.forest.desc": {
+    "en": "HashiCorp — deep green with lime accent",
+    "zh": "HashiCorp — 深绿配青柠强调色"
+  },
+  "theme.sidebar.light": {
+    "en": "Light",
+    "zh": "浅色"
+  },
+  "theme.sidebar.light.desc": {
+    "en": "Clean Light — GitHub / Stripe style",
+    "zh": "清爽浅色 — GitHub / Stripe 风格"
+  },
+  "theme.sidebar.navy": {
+    "en": "Navy",
+    "zh": "海军蓝"
+  },
+  "theme.sidebar.navy.desc": {
+    "en": "Professional Dark — Supabase / AWS style",
+    "zh": "专业深色 — Supabase / AWS 风格"
+  },
+  "toast.tab.alreadyFavorited": {
+    "en": "Already in favorites",
+    "zh": "已在收藏中"
+  },
+  "toast.tab.favorited": {
+    "en": "Added to favorites",
+    "zh": "已加入收藏"
+  },
+  "tools.cacheMonitor.cacheKey": {
+    "en": "Cache Key",
+    "zh": "缓存密钥"
+  },
+  "tools.cacheMonitor.evict": {
+    "en": "Evict",
+    "zh": "驱逐"
+  },
+  "tools.cacheMonitor.flushAll": {
+    "en": "Flush All",
+    "zh": "全部清空"
+  },
+  "tools.cacheMonitor.persist": {
+    "en": "Persist",
+    "zh": "永久"
+  },
+  "tools.cacheMonitor.totalKeys": {
+    "en": "Total Keys",
+    "zh": "总计密钥"
+  },
+  "tools.generator.downloadZip": {
+    "en": "Download Zip",
+    "zh": "下载 ZIP"
+  },
+  "tools.generator.subtitle": {
+    "en": "Generate backend and frontend code from database",
+    "zh": "从数据库生成后端与前端代码"
+  },
+  "tools.messagePush.encryption": {
+    "en": "Encryption",
+    "zh": "加密"
+  },
+  "tools.messagePush.fromName": {
+    "en": "From Name",
+    "zh": "发件人名称"
+  },
+  "tools.messagePush.port": {
+    "en": "Port",
+    "zh": "端口"
+  },
+  "tools.messagePush.smtpHost": {
+    "en": "Smtp Host",
+    "zh": "SMTP主机"
+  },
+  "tools.schedules.createJob": {
+    "en": "Create Job",
+    "zh": "创建任务"
+  },
+  "tools.schedules.cron": {
+    "en": "Cron",
+    "zh": "Cron 表达式"
+  },
+  "tools.schedules.cronJobManagement": {
+    "en": "Cron Job Management",
+    "zh": "定时任务管理"
+  },
+  "tools.schedules.editJob": {
+    "en": "Edit Job",
+    "zh": "编辑任务"
+  },
+  "tools.schedules.group": {
+    "en": "Group",
+    "zh": "分组"
+  },
+  "tools.schedules.jobName": {
+    "en": "Job Name",
+    "zh": "任务名称"
+  },
+  "tools.schedules.lastRun": {
+    "en": "Last Run",
+    "zh": "最近运行"
+  },
+  "tools.schedules.nextRun": {
+    "en": "Next Run",
+    "zh": "下一步运行"
+  },
+  "tools.schedules.pause": {
+    "en": "Pause",
+    "zh": "暂停"
+  },
+  "tools.schedules.run": {
+    "en": "Run",
+    "zh": "运行"
+  }
+}
