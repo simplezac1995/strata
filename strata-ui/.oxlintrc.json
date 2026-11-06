@@ -1,0 +1,11 @@
+{
+  "ignorePatterns": [],
+  "plugins": ["react", "unicorn", "oxc", "typescript"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "eqeqeq": ["warn", "always", { "null": "ignore" }],
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}

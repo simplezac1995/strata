@@ -1,0 +1,4 @@
+dev.strata.common.core.config.CommonCoreAutoConfiguration
+dev.strata.common.core.config.IdempotencyAutoConfiguration
+dev.strata.common.core.config.RateLimitAutoConfiguration
+dev.strata.common.core.config.WebHardeningAutoConfiguration

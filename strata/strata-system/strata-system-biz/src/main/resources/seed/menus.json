@@ -1,0 +1,426 @@
+{
+  "menus": [
+    {
+      "key": "system",
+      "name": "nav.system",
+      "type": "directory",
+      "path": "/system",
+      "component": "Layout",
+      "sortOrder": 1,
+      "children": [
+        {
+          "key": "users",
+          "name": "nav.users",
+          "path": "users",
+          "component": "system/UserList",
+          "permission": "system:user:list",
+          "sortOrder": 1,
+          "buttons": [
+            {
+              "name": "common.create",
+              "permission": "system:user:create",
+              "sortOrder": 1
+            },
+            {
+              "name": "common.update",
+              "permission": "system:user:update",
+              "sortOrder": 2
+            },
+            {
+              "name": "common.delete",
+              "permission": "system:user:delete",
+              "sortOrder": 3
+            }
+          ]
+        },
+        {
+          "key": "roles",
+          "name": "nav.roles",
+          "path": "roles",
+          "component": "system/RoleList",
+          "permission": "system:role:list",
+          "sortOrder": 2,
+          "buttons": [
+            {
+              "name": "common.create",
+              "permission": "system:role:create",
+              "sortOrder": 1
+            },
+            {
+              "name": "common.update",
+              "permission": "system:role:update",
+              "sortOrder": 2
+            },
+            {
+              "name": "common.delete",
+              "permission": "system:role:delete",
+              "sortOrder": 3
+            }
+          ]
+        },
+        {
+          "key": "menus",
+          "name": "nav.menus",
+          "path": "menus",
+          "component": "system/MenuList",
+          "permission": "system:menu:list",
+          "sortOrder": 3,
+          "buttons": [
+            {
+              "name": "common.create",
+              "permission": "system:menu:create",
+              "sortOrder": 1
+            },
+            {
+              "name": "common.update",
+              "permission": "system:menu:update",
+              "sortOrder": 2
+            },
+            {
+              "name": "common.delete",
+              "permission": "system:menu:delete",
+              "sortOrder": 3
+            }
+          ]
+        },
+        {
+          "key": "depts",
+          "name": "nav.departments",
+          "path": "departments",
+          "component": "system/Departments",
+          "permission": "system:dept:list",
+          "sortOrder": 4,
+          "buttons": [
+            {
+              "name": "common.create",
+              "permission": "system:dept:create",
+              "sortOrder": 1
+            },
+            {
+              "name": "common.update",
+              "permission": "system:dept:update",
+              "sortOrder": 2
+            },
+            {
+              "name": "common.delete",
+              "permission": "system:dept:delete",
+              "sortOrder": 3
+            }
+          ]
+        },
+        {
+          "key": "op-logs",
+          "name": "nav.operation.logs",
+          "path": "logs/operation",
+          "component": "system/OperationLogs",
+          "permission": "system:operationlog:list",
+          "sortOrder": 5
+        },
+        {
+          "key": "posts",
+          "name": "nav.posts",
+          "path": "posts",
+          "component": "system/PostList",
+          "permission": "system:post:list",
+          "sortOrder": 6,
+          "buttons": [
+            {
+              "name": "common.create",
+              "permission": "system:post:create",
+              "sortOrder": 1
+            },
+            {
+              "name": "common.update",
+              "permission": "system:post:update",
+              "sortOrder": 2
+            },
+            {
+              "name": "common.delete",
+              "permission": "system:post:delete",
+              "sortOrder": 3
+            }
+          ]
+        },
+        {
+          "key": "dicts",
+          "name": "nav.dictionaries",
+          "path": "dictionaries",
+          "component": "system/DictList",
+          "permission": "system:dict:list",
+          "sortOrder": 7,
+          "buttons": [
+            {
+              "name": "common.create",
+              "permission": "system:dict:create",
+              "sortOrder": 1
+            },
+            {
+              "name": "common.update",
+              "permission": "system:dict:update",
+              "sortOrder": 2
+            },
+            {
+              "name": "common.delete",
+              "permission": "system:dict:delete",
+              "sortOrder": 3
+            }
+          ]
+        },
+        {
+          "key": "params",
+          "name": "nav.parameters",
+          "path": "parameters",
+          "component": "system/ParamList",
+          "permission": "system:param:list",
+          "sortOrder": 8,
+          "buttons": [
+            {
+              "name": "common.create",
+              "permission": "system:param:create",
+              "sortOrder": 1
+            },
+            {
+              "name": "common.update",
+              "permission": "system:param:update",
+              "sortOrder": 2
+            },
+            {
+              "name": "common.delete",
+              "permission": "system:param:delete",
+              "sortOrder": 3
+            }
+          ]
+        },
+        {
+          "key": "login-logs",
+          "name": "nav.login.logs",
+          "path": "logs/login",
+          "component": "system/LoginLogs",
+          "permission": "system:loginlog:list",
+          "sortOrder": 9
+        },
+        {
+          "key": "files",
+          "name": "nav.files",
+          "path": "files",
+          "component": "system/FileList",
+          "permission": "system:file:list",
+          "sortOrder": 10,
+          "buttons": [
+            {
+              "name": "common.upload",
+              "permission": "system:file:create",
+              "sortOrder": 1
+            },
+            {
+              "name": "common.delete",
+              "permission": "system:file:delete",
+              "sortOrder": 2
+            }
+          ]
+        },
+        {
+          "key": "tenants",
+          "name": "nav.tenants",
+          "path": "tenants",
+          "component": "system/TenantList",
+          "permissionBase": "system:tenant",
+          "crudButtons": true,
+          "sortOrder": 11
+        },
+        {
+          "key": "clients",
+          "name": "nav.clients",
+          "path": "clients",
+          "component": "system/ClientList",
+          "permissionBase": "system:client",
+          "crudButtons": true,
+          "sortOrder": 12
+        },
+        {
+          "key": "sessions",
+          "name": "nav.sessions",
+          "path": "sessions",
+          "component": "system/SessionList",
+          "permission": "system:loginlog:list",
+          "sortOrder": 13
+        },
+        {
+          "key": "sensitive-words",
+          "name": "nav.sensitive.words",
+          "path": "sensitive",
+          "component": "system/SensitiveWords",
+          "permissionBase": "system:sensitiveword",
+          "crudButtons": true,
+          "sortOrder": 14
+        },
+        {
+          "key": "regions",
+          "name": "nav.regions",
+          "path": "regions",
+          "component": "system/RegionList",
+          "permissionBase": "system:region",
+          "crudButtons": true,
+          "sortOrder": 15
+        },
+        {
+          "key": "webhooks",
+          "name": "nav.webhooks",
+          "path": "webhooks",
+          "component": "system/WebhookList",
+          "permissionBase": "system:webhook",
+          "crudButtons": true,
+          "sortOrder": 16
+        },
+        {
+          "key": "email-templates",
+          "name": "nav.email.templates",
+          "path": "email-templates",
+          "component": "system/EmailTemplateList",
+          "permissionBase": "system:emailtemplate",
+          "crudButtons": true,
+          "sortOrder": 17
+        },
+        {
+          "key": "announcements",
+          "name": "nav.announcements",
+          "path": "announcements",
+          "component": "system/AnnouncementList",
+          "permissionBase": "system:announcement",
+          "crudButtons": true,
+          "sortOrder": 18
+        },
+        {
+          "key": "site-settings",
+          "name": "settings.site.title",
+          "path": "site-settings",
+          "component": "system/SiteSettings",
+          "permissionBase": "system:sitesetting",
+          "crudButtons": true,
+          "sortOrder": 19
+        },
+        {
+          "key": "i18n",
+          "name": "nav.i18n",
+          "path": "i18n",
+          "component": "system/I18n",
+          "permissionBase": "system:i18n",
+          "crudButtons": true,
+          "sortOrder": 20
+        }
+      ]
+    },
+    {
+      "key": "demo",
+      "name": "nav.demo",
+      "type": "directory",
+      "path": "/demo",
+      "component": "Layout",
+      "sortOrder": 2,
+      "children": [
+        {
+          "key": "products",
+          "name": "nav.products",
+          "path": "products",
+          "component": "demo/ProductList",
+          "permission": "demo:product:list",
+          "sortOrder": 1,
+          "buttons": [
+            {
+              "name": "common.create",
+              "permission": "demo:product:create",
+              "sortOrder": 1
+            },
+            {
+              "name": "common.update",
+              "permission": "demo:product:update",
+              "sortOrder": 2
+            },
+            {
+              "name": "common.delete",
+              "permission": "demo:product:delete",
+              "sortOrder": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "generator",
+      "name": "nav.code.generator",
+      "path": "/tools/code-generator",
+      "component": "tools/CodeGenerator",
+      "permission": "generator:list",
+      "sortOrder": 3,
+      "buttons": [
+        {
+          "name": "common.create",
+          "permission": "generator:create",
+          "sortOrder": 1
+        }
+      ]
+    },
+    {
+      "key": "tools",
+      "name": "nav.tools",
+      "type": "directory",
+      "path": "/tools",
+      "component": "Layout",
+      "sortOrder": 6,
+      "children": [
+        {
+          "key": "cache",
+          "name": "nav.cache.monitor",
+          "path": "cache",
+          "component": "tools/CacheMonitor",
+          "permission": "system:cache:list",
+          "sortOrder": 1,
+          "buttons": [
+            {
+              "name": "common.delete",
+              "permission": "system:cache:delete",
+              "sortOrder": 1
+            }
+          ]
+        },
+        {
+          "key": "jobs",
+          "name": "nav.jobs",
+          "path": "schedules",
+          "component": "tools/Schedules",
+          "permissionBase": "system:job",
+          "crudButtons": true,
+          "sortOrder": 21
+        },
+        {
+          "key": "message-channels",
+          "name": "nav.message.channels",
+          "path": "message-push",
+          "component": "tools/MessagePush",
+          "permissionBase": "system:messagechannel",
+          "crudButtons": true,
+          "sortOrder": 22
+        }
+      ]
+    },
+    {
+      "key": "settings",
+      "name": "nav.settings",
+      "type": "directory",
+      "path": "/settings",
+      "component": "Layout",
+      "sortOrder": 7,
+      "children": [
+        {
+          "key": "api-keys",
+          "name": "nav.api.keys",
+          "path": "api-keys",
+          "component": "settings/ApiKeys",
+          "permissionBase": "system:apikey",
+          "crudButtons": true,
+          "sortOrder": 1
+        }
+      ]
+    }
+  ]
+}
