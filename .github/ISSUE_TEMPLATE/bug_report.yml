@@ -1,0 +1,71 @@
+name: Bug report
+description: Report a reproducible defect in Strata Admin
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Do not paste secrets (JWT keys, database passwords, wallet material) here.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Release version, or the commit/tag you are running.
+      placeholder: v0.2.1 or a commit sha
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - strata-common
+        - strata-system
+        - strata-plugin
+        - strata-generator
+        - strata-starter
+        - strata-app
+        - docs / build / CI
+        - not sure
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, JDK and Maven versions, database/Redis versions, Docker or local.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour and logs
+      description: Redact secrets before pasting.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched the existing issues for duplicates
+          required: true
+        - label: This is not a security vulnerability (those follow SECURITY.md)
+          required: true

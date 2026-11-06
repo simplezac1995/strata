@@ -1,0 +1,39 @@
+# The minimal open-source application: starter + optional AI modules only.
+spring:
+  application:
+    name: strata-minimal-app
+  datasource:
+    url: jdbc:postgresql://${STRATA_DB_HOST:127.0.0.1}:${STRATA_DB_PORT:5432}/${STRATA_DB_NAME:strata}
+    username: ${STRATA_DB_USER:strata}
+    password: ${STRATA_DB_PASSWORD:strata}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: public
+  flyway:
+    enabled: true
+    # The starter ships the framework schema; consumers append their own locations after this one.
+    locations: classpath:db/strata-framework
+    baseline-on-migrate: true
+
+server:
+  port: 8080
+
+strata:
+  security:
+    jwt:
+      secret: ${STRATA_JWT_SECRET:strata-minimal-dev-secret-change-me-to-a-long-random-string-32+}
+      access-token-ttl-seconds: 7200
+      refresh-token-ttl-seconds: 604800
+  system:
+    seed:
+      admin-password: ${STRATA_ADMIN_PASSWORD:admin123}
+  demo-data:
+    enabled: false
+  rate-limit:
+    enabled: false
+  starter:
+    auto-configuration: true

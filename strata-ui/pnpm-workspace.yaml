@@ -1,0 +1,8 @@
+# pnpm >= 10 reads project settings (overrides etc.) from this file instead of the package.json "pnpm" field.
+overrides:
+  undici: 8.12.2
+  follow-redirects: 1.16.2
+  brace-expansion@2: 2.1.7
+  source-map-js: 1.2.2
+  smol-toml: 1.9.0
+  ansi-regex@5: 5.0.1
