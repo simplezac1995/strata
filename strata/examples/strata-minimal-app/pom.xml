@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.simplezac1995</groupId>
+        <artifactId>strata-examples</artifactId>
+        <version>0.8.0</version>
+    </parent>
+    <artifactId>strata-minimal-app</artifactId>
+    <name>strata-minimal-app</name>
+    <description>
+        A runnable minimal application that only depends on the starter (plus the optional AI modules). It proves the
+        open-source promise: one dependency, one @SpringBootApplication, a schema migration and Swagger UI.
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- AI is the optional add-on; adding it must be enough for the AI modules to auto-configure. -->
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-ai-biz</artifactId>
+        </dependency>
+        <!-- the AI modules need an LLM gateway; the reference plugin provides it -->
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-plugin-llm-openai</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <skip>false</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

@@ -1,0 +1,4 @@
+dev.strata.common.security.config.SecurityAutoConfiguration
+dev.strata.common.security.config.SecurityWebAutoConfiguration
+dev.strata.common.security.tenant.TenantAutoConfiguration
+dev.strata.common.security.datascope.DataScopeAutoConfiguration
