@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..500&family=JetBrains+Mono:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Layout density — toggled via AppearanceContext on document.body */
+.density-compact {
+  --row-h: 36px;
+  --nav-item-h: 36px;
+}
+
+.density-default {
+  --row-h: 48px;
+  --nav-item-h: 40px;
+}
+
+/* Accessibility filters — toggled via AppContext on document.body */
+body.grayscale {
+  filter: grayscale(1);
+}
+
+body.color-weak {
+  filter: invert(80%);
+}
+
+/* Keyboard focus for interactive chrome (form fields use MUI focus ring) */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid rgb(99 102 241 / 0.45);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Minimal scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(107, 114, 128, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.38);
+}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  "entry": [
+    "index.html",
+    "src/test/**/*.{ts,tsx}",
+    "src/**/*.test.{ts,tsx}",
+    "e2e/**/*.ts",
+    "openapi-typescript.config.ts",
+    "scripts/*.mjs",
+    "public/sw.js"
+  ],
+  "project": ["src/**/*.{ts,tsx}", "e2e/**/*.ts", "scripts/**/*.mjs"],
+  "ignore": ["scripts/archive/**", "src/components/ai/**"],
+  "rules": {
+    "exports": "off",
+    "nsExports": "off",
+    "types": "off",
+    "nsTypes": "off",
+    "enumMembers": "off",
+    "duplicates": "off"
+  },
+  "ignoreDependencies": ["bpmn-js"]
+}
