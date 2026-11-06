@@ -1,0 +1,26 @@
+Strata Admin
+Copyright 2026 Strata maintainers
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+It is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.
+
+Source: https://github.com/simplezac1995/strata
+
+Third-party components
+----------------------
+Strata depends on third-party libraries whose licenses are declared in each
+module's POM. Nothing here relicenses them. The authoritative list for a given
+build is the dependency tree / SBOM of that build:
+
+    mvn dependency:tree
+    # or the SBOM attached to each release
+
+No third-party source code is vendored into this repository. Where an external
+project influenced a design, the mechanism (not the code) is credited in
+the corresponding ADR (docs/adr/) and in CONTRIBUTING.md.
+
+Trademarks
+----------
+The Apache License does not grant trademark rights. The "Strata" name and any
+project logos are not covered by the source license.

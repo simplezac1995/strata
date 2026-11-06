@@ -1,0 +1,60 @@
+{
+  "posts": [
+    { "code": "CEO", "name": "Chief Executive Officer", "sortOrder": 1 },
+    { "code": "CTO", "name": "Chief Technology Officer", "sortOrder": 2 },
+    { "code": "DEV_LEAD", "name": "Development Lead", "sortOrder": 3 },
+    { "code": "PM", "name": "Product Manager", "sortOrder": 4 },
+    { "code": "UI_UX", "name": "UI/UX Designer", "sortOrder": 5 },
+    { "code": "QA", "name": "Quality Assurance", "sortOrder": 6 }
+  ],
+  "dictTypes": [
+    { "code": "user_status", "name": "User Status", "sortOrder": 1 },
+    { "code": "gender", "name": "Gender", "sortOrder": 2 },
+    { "code": "order_status", "name": "Order Status", "sortOrder": 3 },
+    { "code": "notification_type", "name": "Notification Type", "sortOrder": 4 },
+    { "code": "file_type", "name": "File Type", "sortOrder": 5 }
+  ],
+  "dictData": [
+    { "typeCode": "user_status", "value": "0", "label": "Disabled", "sortOrder": 1 },
+    { "typeCode": "user_status", "value": "1", "label": "Enabled", "sortOrder": 2 },
+    { "typeCode": "gender", "value": "M", "label": "Male", "sortOrder": 1 },
+    { "typeCode": "gender", "value": "F", "label": "Female", "sortOrder": 2 },
+    { "typeCode": "gender", "value": "O", "label": "Other", "sortOrder": 3 },
+    { "typeCode": "order_status", "value": "pending", "label": "Pending", "sortOrder": 1 },
+    { "typeCode": "order_status", "value": "processing", "label": "Processing", "sortOrder": 2 },
+    { "typeCode": "order_status", "value": "shipped", "label": "Shipped", "sortOrder": 3 },
+    { "typeCode": "order_status", "value": "delivered", "label": "Delivered", "sortOrder": 4 }
+  ],
+  "params": [
+    {
+      "key": "sys.upload.maxSize",
+      "value": "10485760",
+      "type": "number",
+      "remark": "Max upload size in bytes (10MB)"
+    },
+    {
+      "key": "sys.session.timeout",
+      "value": "3600",
+      "type": "number",
+      "remark": "Session timeout in seconds"
+    },
+    {
+      "key": "sys.pagination.default",
+      "value": "20",
+      "type": "number",
+      "remark": "Default page size"
+    },
+    {
+      "key": "sys.logo.url",
+      "value": "/assets/logo.svg",
+      "type": "string",
+      "remark": "System logo URL"
+    },
+    {
+      "key": "sys.copyright",
+      "value": "© 2025 Strata Admin",
+      "type": "string",
+      "remark": "Footer copyright text"
+    }
+  ]
+}

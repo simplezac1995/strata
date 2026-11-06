@@ -1,0 +1,28 @@
+# Logs
+# Logs（仅锚定根级，避免忽略源码树 src/pages/system/logs/）
+/logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.vite
+scripts/hardcoded-ui-scan.json
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+strata-ui-*.md
