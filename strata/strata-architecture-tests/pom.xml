@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.simplezac1995</groupId>
+        <artifactId>strata</artifactId>
+        <version>0.11.1</version>
+    </parent>
+    <artifactId>strata-architecture-tests</artifactId>
+    <name>strata-architecture-tests</name>
+    <description>
+        Build-time architecture gate for the published framework: ArchUnit structural rules plus a Spring Modulith
+        module-graph check over the modules that ship in the open-source repository. The module has no production code;
+        it exists so `mvn verify` fails on a package-boundary violation instead of leaving the layering rules in a
+        private product test.
+    </description>
+
+    <properties>
+        <!--
+          Test-only gate artifact: it never ships in a release. The parent release profile runs the SBOM, sources,
+          javadoc and Central plugins for every module, so opt this one out explicitly.
+        -->
+        <maven.deploy.skip>true</maven.deploy.skip>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
+        <maven.source.skip>true</maven.source.skip>
+        <japicmp.skip>true</japicmp.skip>
+    </properties>
+
+    <dependencies>
+        <!--
+          The published framework modules go on the test classpath so ArchUnit can import every `dev.strata` class and
+          Spring Modulith can derive the module graph. The aggregating modules are used deliberately: the starter
+          brings common + system, ai-biz brings the AI modules, and the plugin implementations are needed so the
+          "biz must not depend on plugin implementations" rule can resolve its targets.
+        -->
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-spring-boot-starter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-ai-biz</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-generator</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- The golden-path example module is part of the open-source tree: keep it inside the gate, too. -->
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-module-example</artifactId>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Plugin implementations are optional capabilities; consumers code against strata-plugin-api only. -->
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-plugin-storage-local</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-plugin-stripe</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-plugin-llm-openai</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-plugin-excel</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-plugin-encrypt-aes</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.simplezac1995</groupId>
+            <artifactId>strata-plugin-workflow-flowable</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Test framework: JUnit 5 + assertions. -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.tngtech.archunit</groupId>
+            <artifactId>archunit-junit5</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- Spring Modulith module model + verification (version from the spring-modulith BOM in the root pom). -->
+        <dependency>
+            <groupId>org.springframework.modulith</groupId>
+            <artifactId>spring-modulith-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

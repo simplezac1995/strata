@@ -1,0 +1,139 @@
+# Build
+target/
+**/target/
+.idea/
+*.iml
+.vscode/
+*.class
+*.jar
+*.war
+**/effective-pom
+*.log
+# 仅忽略仓库根级运行时日志目录，避免误伤源码树（如 strata-ui/src/pages/system/logs/�?/logs/
+
+# UI
+/node_modules/
+strata-ui/node_modules/
+strata-ui/dist/
+strata-ui/.vite/
+strata-ui/scripts/hardcoded-ui-scan.json
+strata-ui/test-results/
+strata-ui/playwright-report/
+# SPA build output is injected into the backend at image build time (CI: mkdir -p + cp dist/*);
+# never commit the built frontend into the backend source tree. Test fixtures under src/test are kept.
+strata/strata-app/src/main/resources/static/
+*.local
+
+# Root package.json is a convenience script hub with no deps;
+# keep the real lockfile at strata-ui/pnpm-lock.yaml.
+/pnpm-lock.yaml
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Agent tooling: per-developer state, excluded below (see the per-developer section).
+.claude/
+
+# Misc
+*.swp
+.cursor/projects/
+
+# Local agent tooling runtime state (Reasonix task/session snapshots)
+.reasonix/
+reasonix.toml
+
+# Agent session workspace (transient, never commit)
+.sessions/
+
+# One-off game-icon scraping scripts and raw downloads
+/game-icons/
+/download_game_icons.py
+/retry_game_icons.py
+/update_game_icons.py
+/game_icons_list.json
+
+# Third-party/local agent working memory and one-off audit snapshots
+.workbuddy/
+/audit-structure-naming-*.html
+/architecture-*.html
+/architecture-analysis-*.html
+
+# Local build artifacts and temp directories
+/build/
+/cache/
+/out/
+
+# Node modules (root convenience package)
+/node_modules/
+
+# Local working documentation �?keep the entry map and append-only ADRs tracked,
+# ignore ad-hoc / scratch notes under docs/. Already-tracked files are NOT untracked
+# by this rule; it only prevents NEW files under docs/ from being added unless they
+# match a negation below.
+docs/*
+!docs/README.md
+!docs/adr/
+!docs/12-*.md
+!docs/13-*.md
+!docs/14-*.md
+!docs/15-*.md
+!docs/17-*.md
+!docs/16-*.md
+!docs/18-*.md
+!docs/配置参�?md
+
+# Merge-conflict / patch leftovers
+*.orig
+*.rej
+# ── Tracked-clutter clean-up (2026-11) ──────────────────────────────────────
+# Generated contract artifacts (solc output). Regenerate with the contract build step; never commit.
+**/solidity/build/
+
+# Vendored game artwork belongs to the player app; the admin copy was never referenced.
+strata-ui/public/game-icons/
+
+# Stray root-level migration copy �?the real module is strata/strata-migrations/.
+/strata-migrations/
+
+# Agent tooling (per-developer)
+.agents/
+.cursor/
+skills-lock.json
+
+# Local build/deploy artifacts and one-off database scripts kept in the working tree only
+.deploy-artifacts/
+/*.sql
+
+# Redis persistence dumps are runtime state, never source.
+*.rdb
+
+# Generated dependency report (regenerate with `mvn dependency:tree` when needed).
+scripts/dependency-tree.txt
+.release/
+
+# Open-source docs staging (FAQ, hosted-demo screenshots, generated config reference)
+!docs/oss/
+!docs/oss/**
+!docs/configuration-reference.md
+!docs/architecture.md
+!docs/conventions.md
+!docs/adoption.md
+!docs/comparison.md
+!docs/sso-oidc.md
+!docs/saml.md
+!docs/scim.md
+!docs/tutorials/
+!docs/tutorials/*.md
+!docs/screenshots/
+!docs/screenshots/*.png
+!docs/screenshots/*.gif
+!docs/faq.md
