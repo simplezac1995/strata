@@ -1,0 +1,44 @@
+name: strata-demo
+
+# Optional overlay: docker compose -f docker-compose.yml -f docker-compose.sso.yml up --build
+# Opens the demo admin console with "Continue with Keycloak" (demo / demo123).
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0
+    command: ["start-dev", "--import-realm"]
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+      KC_HOSTNAME: http://localhost:8082
+      KC_HOSTNAME_STRICT: "false"
+      KC_HTTP_ENABLED: "true"
+    ports:
+      - "8082:8080"
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/127.0.0.1/8080' || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 40
+    volumes:
+      - ./deploy/keycloak/strata-realm.json:/opt/keycloak/data/import/strata-realm.json:ro
+
+  backend:
+    environment:
+      SPRING_APPLICATION_JSON: >-
+        {"strata":{"social":{"enabled":true,"state-store":"redis",
+        "allowed-redirect-uris":["http://localhost:3001/sso-callback"],
+        "providers":{"keycloak":{"display-name":"Keycloak",
+        "issuer-uri":"http://localhost:8082/realms/strata",
+        "authorization-endpoint":"http://localhost:8082/realms/strata/protocol/openid-connect/auth",
+        "token-endpoint":"http://keycloak:8080/realms/strata/protocol/openid-connect/token",
+        "user-info-endpoint":"http://keycloak:8080/realms/strata/protocol/openid-connect/userinfo",
+        "client-id":"strata-admin","client-secret":"strata-demo-secret",
+        "roles-claim":"groups","role-mappings":{"strata-admins":"admin"},"auto-provision":true}}},
+        "saml":{"enabled":true,"display-name":"Keycloak SAML",
+        "idp-metadata-uri":"http://keycloak:8080/realms/strata/protocol/saml/descriptor",
+        "sp-entity-id":"strata-saml","acs-url":"http://localhost:3001/saml2/acs",
+        "frontend-callback-url":"http://localhost:3001/sso-callback",
+        "default-role-code":"admin","auto-provision":true,"state-store":"redis"}}}
+    depends_on:
+      keycloak:
+        condition: service_healthy

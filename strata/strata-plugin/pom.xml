@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.simplezac1995</groupId>
+        <artifactId>strata</artifactId>
+        <version>0.10.1</version>
+    </parent>
+    <artifactId>strata-plugin</artifactId>
+    <packaging>pom</packaging>
+    <name>strata-plugin</name>
+    <description>Plugin SPI and vendor starters</description>
+    <modules>
+        <module>strata-plugin-api</module>
+        <module>strata-plugin-storage-local</module>
+        <module>strata-plugin-stripe</module>
+        <module>strata-plugin-llm-openai</module>
+        <module>strata-plugin-excel</module>
+        <module>strata-plugin-encrypt-aes</module>
+        <module>strata-plugin-workflow-flowable</module>
+    </modules>
+</project>
