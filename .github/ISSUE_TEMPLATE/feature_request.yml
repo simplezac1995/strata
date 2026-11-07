@@ -1,0 +1,36 @@
+name: Feature request
+description: Suggest a capability, API or documentation improvement
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the use case, not only the preferred implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - strata-common
+        - strata-system
+        - strata-plugin
+        - strata-generator
+        - strata-starter
+        - docs / build / CI
+        - not sure
+    validations:
+      required: true
