@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.simplezac1995</groupId>
+        <artifactId>strata-ai</artifactId>
+        <version>0.11.3</version>
+    </parent>
+    <artifactId>strata-ai-config</artifactId>
+    <packaging>pom</packaging>
+    <name>strata-ai-config</name>
+    <modules>
+        <module>strata-ai-config-api</module>
+        <module>strata-ai-config-biz</module>
+    </modules>
+</project>

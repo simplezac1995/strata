@@ -1,0 +1,10 @@
+.git
+.idea
+*.log
+**/target
+**/node_modules
+**/dist
+strata-ui
+docs
+deploy
+.release

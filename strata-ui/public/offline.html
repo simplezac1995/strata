@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>离线 - Strata Admin</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+      }
+      .container {
+        background: white;
+        border-radius: 16px;
+        padding: 48px;
+        max-width: 480px;
+        width: 90%;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+      .icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 24px;
+        background: #f5f5f5;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #1a1a1a;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 24px;
+      }
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: #fff3e0;
+        color: #e65100;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 24px;
+      }
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        background: #ff9800;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+      button {
+        background: #1976d2;
+        color: white;
+        border: none;
+        padding: 12px 32px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      button:hover {
+        background: #1565c0;
+      }
+      button:active {
+        transform: scale(0.98);
+      }
+      .tips {
+        margin-top: 24px;
+        padding-top: 24px;
+        border-top: 1px solid #eee;
+        text-align: left;
+      }
+      .tips h3 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #333;
+      }
+      .tips ul {
+        list-style: none;
+        padding: 0;
+      }
+      .tips li {
+        font-size: 13px;
+        color: #666;
+        padding: 4px 0;
+        padding-left: 20px;
+        position: relative;
+      }
+      .tips li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #1976d2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">📡</div>
+      <div class="status">
+        <span class="status-dot"></span>
+        <span>网络连接已断开</span>
+      </div>
+      <h1>您当前处于离线状态</h1>
+      <p>Strata Admin 需要网络连接才能正常工作。请检查您的网络设置，然后尝试重新连接。</p>
+      <button onclick="window.location.reload()">重新连接</button>
+      <div class="tips">
+        <h3>排查建议</h3>
+        <ul>
+          <li>检查 Wi-Fi 或以太网连接是否正常</li>
+          <li>尝试访问其他网站确认网络状态</li>
+          <li>如果使用 VPN，请检查 VPN 连接</li>
+          <li>部分已缓存的页面可能仍可访问</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      // 监听网络状态变化
+      window.addEventListener("online", () => {
+        window.location.reload();
+      });
+    </script>
+  </body>
+</html>
