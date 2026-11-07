@@ -1,0 +1,274 @@
+{
+  "roles": [
+    { "code": "operator", "name": "Operations Manager", "enabled": true },
+    { "code": "auditor", "name": "Compliance Auditor", "enabled": true },
+    { "code": "viewer", "name": "Read-only Analyst", "enabled": true }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin123",
+      "nickname": "System Administrator",
+      "email": "admin@strata.demo",
+      "tenantCode": "default",
+      "enabled": true
+    },
+    {
+      "username": "operator",
+      "password": "StrataDemo2026!",
+      "nickname": "Olivia Operations",
+      "email": "operator@strata.demo",
+      "tenantCode": "acme",
+      "enabled": true
+    },
+    {
+      "username": "auditor",
+      "password": "StrataDemo2026!",
+      "nickname": "Arthur Audit",
+      "email": "auditor@strata.demo",
+      "tenantCode": "acme",
+      "enabled": true
+    },
+    {
+      "username": "viewer",
+      "password": "StrataDemo2026!",
+      "nickname": "Vera Viewer",
+      "email": "viewer@strata.demo",
+      "tenantCode": "globex",
+      "enabled": true
+    },
+    {
+      "username": "suspended.user",
+      "password": "StrataDemo2026!",
+      "nickname": "Suspended User",
+      "email": "suspended@strata.demo",
+      "tenantCode": "globex",
+      "enabled": false
+    }
+  ],
+  "userRoles": [
+    { "username": "operator", "roleCode": "operator" },
+    { "username": "auditor", "roleCode": "auditor" },
+    { "username": "viewer", "roleCode": "viewer" }
+  ],
+  "roleMenus": [
+    { "roleCode": "operator", "permission": "system:user:list" },
+    { "roleCode": "operator", "permission": "system:role:list" },
+    { "roleCode": "operator", "permission": "system:dept:list" },
+    { "roleCode": "operator", "permission": "system:post:list" },
+    { "roleCode": "operator", "permission": "system:dict:list" },
+    { "roleCode": "operator", "permission": "system:param:list" },
+    { "roleCode": "operator", "permission": "demo:product:list" },
+    { "roleCode": "operator", "permission": "system:announcement:list" },
+    { "roleCode": "auditor", "permission": "system:loginlog:list" },
+    { "roleCode": "auditor", "permission": "system:operationlog:list" },
+    { "roleCode": "auditor", "permission": "system:auditlog:list" },
+    { "roleCode": "viewer", "permission": "demo:product:list" },
+    { "roleCode": "viewer", "permission": "system:announcement:list" }
+  ],
+  "departments": [
+    { "name": "Headquarters", "parentName": null, "sortOrder": 1, "enabled": true },
+    { "name": "Engineering", "parentName": "Headquarters", "sortOrder": 1, "enabled": true },
+    { "name": "Platform Engineering", "parentName": "Engineering", "sortOrder": 1, "enabled": true },
+    { "name": "Product Engineering", "parentName": "Engineering", "sortOrder": 2, "enabled": true },
+    { "name": "Customer Success", "parentName": "Headquarters", "sortOrder": 2, "enabled": true },
+    { "name": "Finance", "parentName": "Headquarters", "sortOrder": 3, "enabled": true },
+    { "name": "Innovation Lab", "parentName": "Headquarters", "sortOrder": 4, "enabled": false }
+  ],
+  "products": [
+    {
+      "name": "Strata Starter License",
+      "sku": "STRATA-STARTER",
+      "price": "49.00",
+      "stock": 320,
+      "description": "Monthly starter subscription for a small team.",
+      "enabled": true
+    },
+    {
+      "name": "Strata Growth License",
+      "sku": "STRATA-GROWTH",
+      "price": "199.00",
+      "stock": 180,
+      "description": "Growth subscription with workflow and AI management capabilities.",
+      "enabled": true
+    },
+    {
+      "name": "Strata Enterprise License",
+      "sku": "STRATA-ENTERPRISE",
+      "price": "899.00",
+      "stock": 42,
+      "description": "Enterprise subscription with tenant and compliance controls.",
+      "enabled": true
+    },
+    {
+      "name": "Implementation Workshop",
+      "sku": "STRATA-WORKSHOP",
+      "price": "1200.00",
+      "stock": 12,
+      "description": "One-day onboarding workshop delivered by a solution architect.",
+      "enabled": true
+    },
+    {
+      "name": "Legacy Migration Add-on",
+      "sku": "STRATA-LEGACY-MIGRATION",
+      "price": "399.00",
+      "stock": 0,
+      "description": "Retired example product retained to exercise disabled and out-of-stock states.",
+      "enabled": false
+    }
+  ],
+  "payments": [
+    {
+      "orderNo": "DEMO-ORDER-1001",
+      "amountCents": 4900,
+      "currency": "usd",
+      "status": "PAID",
+      "sessionId": "cs_demo_paid_1001"
+    },
+    {
+      "orderNo": "DEMO-ORDER-1002",
+      "amountCents": 19900,
+      "currency": "usd",
+      "status": "PENDING",
+      "sessionId": "cs_demo_pending_1002"
+    },
+    {
+      "orderNo": "DEMO-ORDER-1003",
+      "amountCents": 89900,
+      "currency": "usd",
+      "status": "FAILED",
+      "sessionId": "cs_demo_failed_1003"
+    }
+  ],
+  "loginLogs": [
+    {
+      "username": "admin",
+      "ip": "127.0.0.1",
+      "location": "Local development",
+      "browser": "Chrome 140 / Windows",
+      "status": "success"
+    },
+    {
+      "username": "operator",
+      "ip": "10.10.4.18",
+      "location": "Shanghai",
+      "browser": "Edge 140 / Windows",
+      "status": "success"
+    },
+    {
+      "username": "auditor",
+      "ip": "10.10.8.21",
+      "location": "Beijing",
+      "browser": "Firefox 142 / macOS",
+      "status": "success"
+    },
+    {
+      "username": "unknown",
+      "ip": "203.0.113.9",
+      "location": "Unknown",
+      "browser": "Unknown",
+      "status": "fail"
+    }
+  ],
+  "operationLogs": [
+    {
+      "username": "admin",
+      "moduleName": "system:user",
+      "actionName": "create",
+      "detail": "Created the operator demonstration account."
+    },
+    {
+      "username": "operator",
+      "moduleName": "demo:product",
+      "actionName": "update",
+      "detail": "Updated stock for Strata Growth License."
+    },
+    {
+      "username": "admin",
+      "moduleName": "system:sitesetting",
+      "actionName": "update",
+      "detail": "Enabled the demonstration AI package."
+    }
+  ],
+  "auditLogs": [
+    {
+      "username": "admin",
+      "eventType": "CREATE",
+      "moduleName": "system:user",
+      "actionName": "create",
+      "resourceType": "User",
+      "resourceId": "operator",
+      "ipAddress": "127.0.0.1",
+      "userAgent": "Strata demo seed",
+      "success": true,
+      "detail": "Provisioned the operator account."
+    },
+    {
+      "username": "operator",
+      "eventType": "UPDATE",
+      "moduleName": "demo:product",
+      "actionName": "update",
+      "resourceType": "DemoProduct",
+      "resourceId": "STRATA-GROWTH",
+      "ipAddress": "10.10.4.18",
+      "userAgent": "Strata demo seed",
+      "success": true,
+      "detail": "Adjusted product inventory."
+    },
+    {
+      "username": "auditor",
+      "eventType": "READ",
+      "moduleName": "system:auditlog",
+      "actionName": "list",
+      "resourceType": "AuditLog",
+      "resourceId": "",
+      "ipAddress": "10.10.8.21",
+      "userAgent": "Strata demo seed",
+      "success": true,
+      "detail": "Reviewed the compliance event list."
+    }
+  ],
+  "apiKeys": [
+    {
+      "name": "Demo Automation Key",
+      "plaintext": "sk_demo_automation_2026",
+      "scopes": "system:read demo:read",
+      "enabled": true
+    },
+    {
+      "name": "Demo Read-only Key",
+      "plaintext": "sk_demo_readonly_2026",
+      "scopes": "system:read",
+      "enabled": true
+    },
+    {
+      "name": "Retired Integration Key",
+      "plaintext": "sk_demo_retired_2026",
+      "scopes": "demo:read",
+      "enabled": false
+    }
+  ],
+  "notificationPreferences": [
+    {
+      "username": "admin",
+      "emailEnabled": true,
+      "inAppEnabled": true,
+      "marketingEnabled": false,
+      "securityEnabled": true
+    },
+    {
+      "username": "operator",
+      "emailEnabled": true,
+      "inAppEnabled": true,
+      "marketingEnabled": true,
+      "securityEnabled": true
+    },
+    {
+      "username": "auditor",
+      "emailEnabled": false,
+      "inAppEnabled": true,
+      "marketingEnabled": false,
+      "securityEnabled": true
+    }
+  ]
+}

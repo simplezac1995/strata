@@ -1,0 +1,17 @@
+# Default owner: the project maintainer (see MAINTAINERS.md).
+* @simplezac1995
+
+# Build, framework sources and generated documentation.
+/strata/          @simplezac1995
+/strata-ui/       @simplezac1995
+/scripts/         @simplezac1995
+/docs/            @simplezac1995
+
+# Repository automation and shared governance files.
+/.github/         @simplezac1995
+/README.md        @simplezac1995
+/README.zh-CN.md  @simplezac1995
+/CONTRIBUTING.md  @simplezac1995
+/SECURITY.md      @simplezac1995
+/MAINTAINERS.md   @simplezac1995
+/ROADMAP.md       @simplezac1995
