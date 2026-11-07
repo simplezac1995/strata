@@ -1,0 +1,60 @@
+name: GitHub Release
+
+# Creates the GitHub Release object for version tags (the release workflow publishes Maven Central; this one makes the
+# tag visible in the repository's Releases page). On a push to main it backfills any version tag that does not have a
+# Release yet, so a missed tag still shows up after the next merge.
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Release notes for version tags
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Create missing GitHub releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [[ "${GITHUB_REF_TYPE}" == "tag" ]]; then
+            tags=("${GITHUB_REF_NAME}")
+          else
+            git fetch --tags --force --depth=1 2>/dev/null || true
+            mapfile -t tags < <(git tag --list 'v*' --sort=-v:refname)
+          fi
+          for tag in "${tags[@]}"; do
+            if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+              echo "release for $tag already exists"
+              continue
+            fi
+            version="${tag#v}"
+            notes_file="$(mktemp)"
+            {
+              echo "## Strata $tag"
+              echo
+              if grep -q "^## \[$version\]" CHANGELOG.md; then
+                start=$(grep -n "^## \[$version\]" CHANGELOG.md | head -n 1 | cut -d: -f1)
+                end=$(awk -v s="$start" 'NR > s && /^## \[/ { print NR; exit }' CHANGELOG.md)
+                if [ -n "$end" ]; then
+                  sed -n "$((start + 1)),$((end - 1))p" CHANGELOG.md
+                else
+                  sed -n "$((start + 1)),\$p" CHANGELOG.md
+                fi
+              fi
+            } > "$notes_file"
+            if [ "$(grep -c . "$notes_file" || true)" -gt 2 ]; then
+              gh release create "$tag" --repo "$GITHUB_REPOSITORY" --title "Strata $tag" --notes-file "$notes_file" --verify-tag
+            else
+              gh release create "$tag" --repo "$GITHUB_REPOSITORY" --title "Strata $tag" --generate-notes --verify-tag
+            fi
+            echo "created release $tag"
+          done

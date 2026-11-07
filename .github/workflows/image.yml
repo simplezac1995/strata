@@ -1,0 +1,40 @@
+name: Container image
+
+# Optional: publishes the self-contained image (API + admin SPA in one process) to GHCR.
+# Triggered manually because GitHub Package visibility and the Maven Central access used by the image build are
+# repository/account settings; the supported default is `docker build -t strata-admin .` (see docs/deployment.md).
+# Run it from Actions -> Container image -> Run workflow after configuring package visibility (public packages are
+# opt-in on GHCR).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  image:
+    name: Build and push ghcr.io/${{ github.repository }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/metadata-action@v5
+        id: meta
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=raw,value=latest
+            type=sha
+      - uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}

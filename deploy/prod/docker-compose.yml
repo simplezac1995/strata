@@ -1,0 +1,97 @@
+# Reference production-shaped deployment: one Strata process + PostgreSQL + Redis + Caddy TLS.
+# This is a starting point, not a hardened reference architecture: read docs/deployment.md, security-hardening.md and
+# operations.md, then adapt the resources/backups/observability to your environment.
+#
+#   cp deploy/prod/.env.example deploy/prod/.env   # fill every secret
+#   docker compose -f deploy/prod/docker-compose.yml --env-file deploy/prod/.env up -d --build
+#
+# The image is built from the repository root Dockerfile (SPA + API in one process, non-root, Java 21 JRE).
+name: strata
+
+services:
+  db:
+    image: postgres:18
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${STRATA_DB_NAME:-strata}
+      POSTGRES_USER: ${STRATA_DB_USER:-strata}
+      POSTGRES_PASSWORD: ${STRATA_DB_PASSWORD:?set STRATA_DB_PASSWORD}
+    volumes:
+      - strata-db:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${STRATA_DB_USER:-strata} -d ${STRATA_DB_NAME:-strata}"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    networks: [strata]
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+    networks: [strata]
+
+  app:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    image: strata-admin:${STRATA_VERSION:-latest}
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/${STRATA_DB_NAME:-strata}
+      SPRING_DATASOURCE_USERNAME: ${STRATA_DB_USER:-strata}
+      SPRING_DATASOURCE_PASSWORD: ${STRATA_DB_PASSWORD:?set STRATA_DB_PASSWORD}
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: "6379"
+      STRATA_JWT_SECRET: ${STRATA_JWT_SECRET:?set STRATA_JWT_SECRET}
+      STRATA_ADMIN_PASSWORD: ${STRATA_ADMIN_PASSWORD:?set STRATA_ADMIN_PASSWORD}
+      STRATA_CORS_ALLOWED_ORIGIN_PATTERNS: ${STRATA_CORS_ALLOWED_ORIGIN_PATTERNS:?set STRATA_CORS_ALLOWED_ORIGIN_PATTERNS}
+      STRATA_WORKER_ID: ${STRATA_WORKER_ID:-0}
+      STRATA_HTTP_PORT: "8080"
+      STRATA_MANAGEMENT_PORT: "8081"
+    ports:
+      # API/SPA and the management port stay on localhost: only Caddy talks to them.
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:8081:8081"
+    healthcheck:
+      test: ["CMD-SHELL", "timeout 3 bash -c '</dev/tcp/127.0.0.1/8081' || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 90s
+    networks: [strata]
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on: [app]
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      STRATA_DOMAIN: ${STRATA_DOMAIN:?set STRATA_DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL:?set ACME_EMAIL}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - strata-caddy-data:/data
+      - strata-caddy-config:/config
+    networks: [strata]
+
+volumes:
+  strata-db:
+  strata-caddy-data:
+  strata-caddy-config:
+
+networks:
+  strata:
+    driver: bridge

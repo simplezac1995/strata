@@ -1,0 +1,192 @@
+{
+  "providers": [
+    {
+      "code": "openai",
+      "name": "OpenAI-compatible Demo",
+      "type": "openai",
+      "baseUrl": "https://api.openai.com/v1"
+    },
+    {
+      "code": "anthropic",
+      "name": "Anthropic Demo",
+      "type": "anthropic",
+      "baseUrl": "https://api.anthropic.com"
+    },
+    {
+      "code": "ollama",
+      "name": "Ollama Local",
+      "type": "ollama",
+      "baseUrl": "http://host.docker.internal:11434"
+    }
+  ],
+  "models": [
+    { "providerCode": "openai", "code": "gpt-4o", "name": "GPT-4o", "type": "chat" },
+    { "providerCode": "openai", "code": "gpt-4o-mini", "name": "GPT-4o mini", "type": "chat" },
+    {
+      "providerCode": "openai",
+      "code": "text-embedding-3-small",
+      "name": "Embedding 3 Small",
+      "type": "embedding"
+    },
+    {
+      "providerCode": "anthropic",
+      "code": "claude-sonnet-4",
+      "name": "Claude Sonnet 4",
+      "type": "chat"
+    },
+    { "providerCode": "ollama", "code": "llama3.2", "name": "Llama 3.2", "type": "chat" }
+  ],
+  "prompts": [
+    {
+      "code": "translate-zh",
+      "name": "Translate to Chinese",
+      "template": "Translate the following text into Simplified Chinese:\n\n{{text}}"
+    },
+    {
+      "code": "summarize",
+      "name": "Executive Summary",
+      "template": "Summarize the following content in three concise bullet points:\n\n{{content}}"
+    },
+    {
+      "code": "support-reply",
+      "name": "Support Reply Draft",
+      "template": "Draft a helpful and accurate support reply for this request:\n\n{{request}}"
+    }
+  ],
+  "terms": [
+    { "term": "prompt engineering", "translation": "提示词工程", "notes": "LLM usage" },
+    { "term": "retrieval augmented generation", "translation": "检索增强生成", "notes": "Knowledge search" },
+    { "term": "embedding", "translation": "向量嵌入", "notes": "Vector representation" }
+  ],
+  "vectorStores": [
+    {
+      "name": "Primary Vector Store",
+      "type": "qdrant",
+      "host": "http://qdrant.invalid:6333",
+      "dimensions": 1536
+    },
+    {
+      "name": "Local Development Store",
+      "type": "chroma",
+      "host": "http://chroma.invalid:8000",
+      "dimensions": 768
+    }
+  ],
+  "knowledge": [
+    {
+      "name": "Product Documentation",
+      "description": "Product manuals, release notes and setup instructions.",
+      "embeddingModel": "text-embedding-3-small",
+      "vectorStore": "Primary Vector Store",
+      "chunkSize": 512,
+      "chunkOverlap": 50
+    },
+    {
+      "name": "Support Playbook",
+      "description": "Approved support responses and escalation procedures.",
+      "embeddingModel": "text-embedding-3-small",
+      "vectorStore": "Primary Vector Store",
+      "chunkSize": 400,
+      "chunkOverlap": 40
+    }
+  ],
+  "documents": [
+    {
+      "knowledgeName": "Product Documentation",
+      "name": "administrator-guide.pdf",
+      "sizeKb": 1240,
+      "status": "ready",
+      "chunks": 86
+    },
+    {
+      "knowledgeName": "Product Documentation",
+      "name": "release-notes-2026-q3.md",
+      "sizeKb": 96,
+      "status": "ready",
+      "chunks": 14
+    },
+    {
+      "knowledgeName": "Support Playbook",
+      "name": "incident-escalation.md",
+      "sizeKb": 72,
+      "status": "processing",
+      "chunks": 0
+    }
+  ],
+  "skills": [
+    {
+      "name": "User Search",
+      "type": "skill",
+      "path": "/api/v1/system/users/page",
+      "description": "Find users by name, email or tenant."
+    },
+    {
+      "name": "Knowledge Lookup",
+      "type": "skill",
+      "path": "/api/v1/ai/knowledge-bases",
+      "description": "List configured knowledge bases for an assistant."
+    },
+    {
+      "name": "Workflow Status",
+      "type": "skill",
+      "path": "/api/v1/pro/workflows",
+      "description": "Inspect workflow definitions and their execution state."
+    }
+  ],
+  "mcpServers": [
+    { "name": "GitHub MCP Example", "url": "https://mcp.invalid/github", "authType": "bearer" },
+    { "name": "Internal Docs MCP Example", "url": "https://mcp.invalid/docs", "authType": "api-key" }
+  ],
+  "agents": [
+    {
+      "name": "Support Assistant",
+      "model": "gpt-4o",
+      "prompt": "You are a helpful customer support assistant. Use approved knowledge only."
+    },
+    {
+      "name": "Operations Copilot",
+      "model": "gpt-4o-mini",
+      "prompt": "You summarize operational data and ask for confirmation before destructive actions."
+    }
+  ],
+  "datasets": [
+    {
+      "name": "Support Q&A",
+      "description": "Curated support conversations for offline evaluation.",
+      "source": "manual",
+      "records": 1204
+    },
+    {
+      "name": "Product Feedback",
+      "description": "Anonymized product feedback labels for classification.",
+      "source": "csv",
+      "records": 648
+    }
+  ],
+  "chatSessions": [
+    { "username": "admin", "title": "Prepare the weekly operations summary", "modelCode": "gpt-4o" },
+    { "username": "admin", "title": "Review support escalation policy", "modelCode": "gpt-4o-mini" }
+  ],
+  "chatMessages": [
+    {
+      "sessionTitle": "Prepare the weekly operations summary",
+      "role": "user",
+      "content": "Summarize the important operational signals I should review this week."
+    },
+    {
+      "sessionTitle": "Prepare the weekly operations summary",
+      "role": "assistant",
+      "content": "Review recent login failures, pending payments, workflow runs and newly created audit events."
+    },
+    {
+      "sessionTitle": "Review support escalation policy",
+      "role": "user",
+      "content": "What should support do when a tenant reports a suspected credential exposure?"
+    },
+    {
+      "sessionTitle": "Review support escalation policy",
+      "role": "assistant",
+      "content": "Verify identity, rotate affected credentials, record an audit event and follow the incident escalation process."
+    }
+  ]
+}

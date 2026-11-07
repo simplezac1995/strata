@@ -1,0 +1,156 @@
+// SPDX-License-Identifier: Apache-2.0
+package dev.strata.system.rbac.biz.service;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import dev.strata.common.core.exception.BusinessException;
+import dev.strata.common.core.exception.ErrorCode;
+import dev.strata.system.rbac.biz.service.support.OidcProviderClient;
+import dev.strata.system.rbac.biz.service.support.SocialLoginProperties;
+import dev.strata.system.rbac.biz.service.support.SocialLoginStateStore;
+import java.net.URI;
+import java.util.List;
+import java.util.Map;
+import org.junit.jupiter.api.Test;
+
+/**
+ * P2-9 social-login security primitives: redirect_uri whitelist, one-time state + PKCE, and the
+ * https + domain-whitelist game-launch open-redirect guard.
+ */
+class SocialLoginAppServiceTest {
+
+    private SocialLoginAppService service(List<String> redirectUris, List<String> launchDomains) {
+        return new SocialLoginAppService(new SocialLoginStateStore(), true, redirectUris, launchDomains);
+    }
+
+    // ---------- redirect_uri whitelist ----------
+
+    @Test
+    void begin_whitelistedRedirect_ok() {
+        SocialLoginAppService svc = service(List.of("https://app.example.com/callback"), List.of("games.example.com"));
+
+        SocialAuthorizeResponse resp = svc.begin("google", "https://app.example.com/callback");
+
+        assertThat(resp.state()).isNotBlank();
+        assertThat(resp.codeChallenge()).isNotBlank();
+        assertThat(resp.authorizeUrl()).contains("state=" + resp.state());
+        assertThat(resp.authorizeUrl()).contains("code_challenge_method=S256");
+        assertThat(resp.authorizeUrl()).contains("redirect_uri=");
+    }
+
+    @Test
+    void begin_nonWhitelistedRedirect_rejected() {
+        SocialLoginAppService svc = service(List.of("https://app.example.com/callback"), List.of());
+        assertThatThrownBy(() -> svc.begin("google", "https://evil.example.com/callback"))
+                .isInstanceOf(BusinessException.class)
+                .extracting(ex -> ((BusinessException) ex).errorCode())
+                .isEqualTo(ErrorCode.BAD_REQUEST);
+    }
+
+    @Test
+    void begin_blankRedirect_rejected() {
+        SocialLoginAppService svc = service(List.of("https://app.example.com/callback"), List.of());
+        assertThatThrownBy(() -> svc.begin("google", "  ")).isInstanceOf(BusinessException.class);
+    }
+
+    @Test
+    void begin_disabled_rejected() {
+        SocialLoginAppService svc = new SocialLoginAppService(
+                new SocialLoginStateStore(), false, List.of("https://app.example.com/callback"), List.of());
+        assertThatThrownBy(() -> svc.begin("google", "https://app.example.com/callback"))
+                .isInstanceOf(BusinessException.class)
+                .extracting(ex -> ((BusinessException) ex).errorCode())
+                .isEqualTo(ErrorCode.FEATURE_NOT_ENABLED);
+    }
+
+    // ---------- one-time state + PKCE ----------
+
+    @Test
+    void callback_stateReplay_rejected() {
+        SocialLoginAppService svc = service(List.of("https://app.example.com/callback"), List.of());
+        SocialAuthorizeResponse resp = svc.begin("google", "https://app.example.com/callback");
+
+        var entry = svc.consumeCallback("google", resp.state());
+        assertThat(entry.codeVerifier()).isNotBlank();
+
+        assertThatThrownBy(() -> svc.consumeCallback("google", resp.state())).isInstanceOf(BusinessException.class);
+    }
+
+    @Test
+    void callback_providerMismatch_rejected() {
+        SocialLoginAppService svc = service(List.of("https://app.example.com/callback"), List.of());
+        SocialAuthorizeResponse resp = svc.begin("google", "https://app.example.com/callback");
+
+        assertThatThrownBy(() -> svc.consumeCallback("github", resp.state())).isInstanceOf(BusinessException.class);
+    }
+
+    // ---------- game launch URL open-redirect guard ----------
+
+    @Test
+    void gameLaunch_httpsWhitelisted_ok() {
+        SocialLoginAppService svc = service(List.of(), List.of("games.example.com"));
+        URI uri = svc.requireSafeGameLaunchUrl("https://games.example.com/play?game=1");
+        assertThat(uri.getHost()).isEqualTo("games.example.com");
+    }
+
+    @Test
+    void gameLaunch_subdomainOfWhitelisted_ok() {
+        SocialLoginAppService svc = service(List.of(), List.of("example.com"));
+        URI uri = svc.requireSafeGameLaunchUrl("https://slot.games.example.com/play");
+        assertThat(uri.getHost()).isEqualTo("slot.games.example.com");
+    }
+
+    @Test
+    void gameLaunch_http_rejected() {
+        SocialLoginAppService svc = service(List.of(), List.of("games.example.com"));
+        assertThatThrownBy(() -> svc.requireSafeGameLaunchUrl("http://games.example.com/play"))
+                .isInstanceOf(BusinessException.class)
+                .extracting(ex -> ((BusinessException) ex).errorCode())
+                .isEqualTo(ErrorCode.BAD_REQUEST);
+    }
+
+    @Test
+    void gameLaunch_nonWhitelistedHost_rejected() {
+        SocialLoginAppService svc = service(List.of(), List.of("games.example.com"));
+        assertThatThrownBy(() -> svc.requireSafeGameLaunchUrl("https://evil.com/play"))
+                .isInstanceOf(BusinessException.class)
+                .extracting(ex -> ((BusinessException) ex).errorCode())
+                .isEqualTo(ErrorCode.BAD_REQUEST);
+    }
+
+    @Test
+    void gameLaunch_malformed_rejected() {
+        SocialLoginAppService svc = service(List.of(), List.of("games.example.com"));
+        assertThatThrownBy(() -> svc.requireSafeGameLaunchUrl("")).isInstanceOf(BusinessException.class);
+    }
+
+    @Test
+    void begin_configuredProvider_usesDiscoveryAuthorizeEndpoint() {
+        SocialLoginProperties properties = new SocialLoginProperties();
+        properties.setEnabled(true);
+        properties.setAllowedRedirectUris(List.of("https://app.example.com/sso-callback"));
+        SocialLoginProperties.Provider provider = new SocialLoginProperties.Provider();
+        provider.setClientId("strata-admin");
+        provider.setIssuerUri("https://id.example.com");
+        properties.setProviders(Map.of("keycloak", provider));
+
+        OidcProviderClient client = mock(OidcProviderClient.class);
+        when(client.metadata(eq("keycloak"), any()))
+                .thenReturn(new OidcProviderClient.ProviderMetadata(
+                        "https://id.example.com/authorize",
+                        "https://id.example.com/token",
+                        "https://id.example.com/userinfo"));
+        SocialLoginAppService svc = new SocialLoginAppService(new SocialLoginStateStore(), properties, client);
+
+        SocialAuthorizeResponse response = svc.begin("keycloak", "https://app.example.com/sso-callback");
+
+        assertThat(response.authorizeUrl()).startsWith("https://id.example.com/authorize?response_type=code");
+        assertThat(response.authorizeUrl()).contains("client_id=strata-admin");
+        assertThat(response.authorizeUrl()).contains("code_challenge_method=S256");
+    }
+}
