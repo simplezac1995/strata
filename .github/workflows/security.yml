@@ -1,0 +1,40 @@
+name: Security
+
+# Supply-chain checks for the open-source repository:
+#  * Trivy scans the dependency lockfiles on each push/PR. Maven poms are skipped because resolving them needs Maven
+#    Central access at scan time; Java dependency risk is covered by Dependabot and the signed release SBOM.
+#  * dependency-review blocks pull requests that introduce high-severity vulnerable dependencies.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vulnerability-scan:
+    name: Trivy · dependency lockfiles
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Scan dependency lockfiles (CRITICAL/HIGH gate)
+        run: |
+          docker run --rm -v "$PWD:/src" aquasec/trivy:latest fs \
+            --scanners vuln \
+            --severity CRITICAL,HIGH \
+            --ignore-unfixed \
+            --skip-files '**/pom.xml' \
+            --exit-code 1 \
+            --no-progress /src
+
+  dependency-review:
+    name: Dependency review (pull requests)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
