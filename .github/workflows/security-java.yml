@@ -1,0 +1,36 @@
+name: Security · Java dependencies
+
+# Weekly supply-chain gate for the Java dependency graph: builds the aggregate CycloneDX SBOM from the Maven reactor
+# and fails on CRITICAL/HIGH vulnerabilities that have a fix available. Runs on a schedule (and manually) so the
+# shared CI does not pay the Maven-resolve cost on every push.
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sbom-scan:
+    name: SBOM vulnerability scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+          cache: maven
+      - name: Build the aggregate CycloneDX SBOM
+        working-directory: strata
+        run: mvn -B -q -DskipTests org.cyclonedx:cyclonedx-maven-plugin:2.9.1:makeAggregateBom
+      - name: Scan the SBOM with Trivy
+        run: |
+          docker run --rm -v "$PWD:/src" aquasec/trivy:latest sbom \
+            --scanners vuln \
+            --severity CRITICAL,HIGH \
+            --ignore-unfixed \
+            --exit-code 1 \
+            --no-progress \
+            /src/strata/target/bom.json

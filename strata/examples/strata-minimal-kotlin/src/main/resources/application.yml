@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/strata}
+    username: ${SPRING_DATASOURCE_USERNAME:strata}
+    password: ${SPRING_DATASOURCE_PASSWORD:strata}
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:localhost}
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+
+strata:
+  security:
+    jwt:
+      secret: ${STRATA_JWT_SECRET:local-dev-only-jwt-secret-at-least-32-characters}
+  system:
+    seed:
+      admin-password: ${STRATA_ADMIN_PASSWORD:admin123}
