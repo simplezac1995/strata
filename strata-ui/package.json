@@ -42,7 +42,7 @@
     "@tiptap/extension-text-align": "^3.31.3",
     "@tiptap/react": "^3.31.3",
     "@tiptap/starter-kit": "^3.31.3",
-    "axios": "^1.20.0",
+    "axios": "^1.21.1",
     "bpmn-js": "^18.25.1",
     "echarts": "^6.1.0",
     "echarts-for-react": "^3.0.6",
