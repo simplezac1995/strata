@@ -65,7 +65,7 @@
         <palantir-java-format.version>2.71.0</palantir-java-format.version>
         <archunit.version>1.4.0</archunit.version>
         <spotless.version>2.44.5</spotless.version>
-        <maven-surefire-plugin.version>3.5.4</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.6.1</maven-surefire-plugin.version>
         <mockito.agent.version>5.23.0</mockito.agent.version>
         <jjwt.version>0.12.6</jjwt.version>
         <mapstruct.version>1.6.3</mapstruct.version>
